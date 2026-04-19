@@ -60,6 +60,33 @@ export default function MarcasPage() {
           </div>
         </div>
 
+        {/* Wall of brands — logos grid */}
+        <div className="max-w-7xl mx-auto px-6 py-12 border-b border-white-warm/5">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-white-warm/30 text-center mb-8">
+            Las diez grandes
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-px bg-white-warm/5">
+            {ordenadas.map((m) => (
+              <a
+                key={m.id}
+                href={`#${m.id}`}
+                className="group bg-piano-black p-6 flex items-center justify-center h-24 hover:bg-piano-black-soft transition-colors"
+                title={m.nombre}
+              >
+                <div className="relative w-full h-full opacity-60 group-hover:opacity-100 transition-opacity">
+                  <Image
+                    src={m.logo}
+                    alt={m.nombre}
+                    fill
+                    className="object-contain"
+                    unoptimized
+                  />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
         {/* Grid de marcas */}
         <div className="max-w-7xl mx-auto px-6 py-16 space-y-24">
           {ordenadas.map((marca, index) => (
@@ -109,6 +136,19 @@ export default function MarcasPage() {
 
               {/* Lado derecho: contenido */}
               <div className="flex flex-col">
+                {/* Wordmark logo */}
+                <div className="mb-6 p-6 bg-piano-black-soft border border-white-warm/5 flex items-center justify-center">
+                  <div className="relative w-full max-w-md h-20">
+                    <Image
+                      src={marca.logo}
+                      alt={`Logo ${marca.nombre}`}
+                      fill
+                      className="object-contain"
+                      unoptimized
+                    />
+                  </div>
+                </div>
+
                 {/* Numeración + nombre */}
                 <div className="flex items-baseline gap-3 sm:gap-4 mb-2 flex-wrap">
                   <span

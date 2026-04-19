@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
+  <rect width="400" height="120" fill="transparent"/>
+    <text x="200" y="55" font-family="Georgia, serif" font-size="50"
+      font-weight="400" font-style="italic"
+      letter-spacing="0" text-anchor="middle" fill="#E8A8C0"
+      >Pleyel</text>
+    <text x="200" y="88" font-family="Georgia, serif" font-size="10"
+      font-weight="300" font-style="normal"
+      letter-spacing="8" text-anchor="middle" fill="#E8A8C0"
+      >PARIS 1807</text>
+    
+      <path d="M140 107 Q200 102 260 107" fill="none" stroke="#E8A8C0" stroke-width="0.4" opacity="0.6"/>
+    
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
+  <rect width="400" height="120" fill="transparent"/>
+    <text x="200" y="55" font-family="Georgia, 'Times New Roman', serif" font-size="40"
+      font-weight="500" font-style="normal"
+      letter-spacing="10" text-anchor="middle" fill="#D89458"
+      >BALDWIN</text>
+    <text x="200" y="88" font-family="Georgia, serif" font-size="9"
+      font-weight="300" font-style="normal"
+      letter-spacing="4" text-anchor="middle" fill="#D89458"
+      >AMERICA'S PIANO · 1862</text>
+    
+      <line x1="100" y1="95" x2="300" y2="95" stroke="#D89458" stroke-width="0.5" opacity="0.6"/>
+    
+</svg>

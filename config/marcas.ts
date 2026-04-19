@@ -13,7 +13,8 @@ export interface MarcaPiano {
   webOficial?:  string;
   color:        string;
   acento:       string;
-  emblema:      string; // path SVG
+  emblema:      string; // emblema heráldico (seal decorativo)
+  logo:         string; // wordmark tipográfico (logo-style)
 }
 
 export const marcas: MarcaPiano[] = [
@@ -37,6 +38,7 @@ export const marcas: MarcaPiano[] = [
     color: "#8B6914",
     acento: "#D4AF37",
     emblema: "/images/marcas/steinway.svg",
+    logo: "/images/marcas/logos/steinway.svg",
   },
   {
     id: "bosendorfer",
@@ -58,6 +60,7 @@ export const marcas: MarcaPiano[] = [
     color: "#6B2C0B",
     acento: "#B8560C",
     emblema: "/images/marcas/bosendorfer.svg",
+    logo: "/images/marcas/logos/bosendorfer.svg",
   },
   {
     id: "bechstein",
@@ -79,6 +82,7 @@ export const marcas: MarcaPiano[] = [
     color: "#2B3A55",
     acento: "#5D7AAD",
     emblema: "/images/marcas/bechstein.svg",
+    logo: "/images/marcas/logos/bechstein.svg",
   },
   {
     id: "bluthner",
@@ -100,6 +104,7 @@ export const marcas: MarcaPiano[] = [
     color: "#7A5919",
     acento: "#C89B3B",
     emblema: "/images/marcas/bluthner.svg",
+    logo: "/images/marcas/logos/bluthner.svg",
   },
   {
     id: "fazioli",
@@ -121,6 +126,7 @@ export const marcas: MarcaPiano[] = [
     color: "#5B2A1E",
     acento: "#B85438",
     emblema: "/images/marcas/fazioli.svg",
+    logo: "/images/marcas/logos/fazioli.svg",
   },
   {
     id: "yamaha",
@@ -142,6 +148,7 @@ export const marcas: MarcaPiano[] = [
     color: "#3D2A5A",
     acento: "#8064B8",
     emblema: "/images/marcas/yamaha.svg",
+    logo: "/images/marcas/logos/yamaha.svg",
   },
   {
     id: "kawai",
@@ -163,6 +170,7 @@ export const marcas: MarcaPiano[] = [
     color: "#1F3A5C",
     acento: "#4E82BA",
     emblema: "/images/marcas/kawai.svg",
+    logo: "/images/marcas/logos/kawai.svg",
   },
   {
     id: "pleyel",
@@ -185,6 +193,7 @@ export const marcas: MarcaPiano[] = [
     color: "#4A1B3D",
     acento: "#9B3F7C",
     emblema: "/images/marcas/pleyel.svg",
+    logo: "/images/marcas/logos/pleyel.svg",
   },
   {
     id: "erard",
@@ -206,6 +215,7 @@ export const marcas: MarcaPiano[] = [
     color: "#3A2818",
     acento: "#8B6A45",
     emblema: "/images/marcas/erard.svg",
+    logo: "/images/marcas/logos/erard.svg",
   },
   {
     id: "baldwin",
@@ -227,5 +237,6 @@ export const marcas: MarcaPiano[] = [
     color: "#4B2C0B",
     acento: "#A0632E",
     emblema: "/images/marcas/baldwin.svg",
+    logo: "/images/marcas/logos/baldwin.svg",
   },
 ];

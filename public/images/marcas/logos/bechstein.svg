@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
+  <rect width="400" height="120" fill="transparent"/>
+    <text x="200" y="55" font-family="'Times New Roman', serif" font-size="32"
+      font-weight="500" font-style="normal"
+      letter-spacing="8" text-anchor="middle" fill="#E8E0D0"
+      >C. BECHSTEIN</text>
+    <text x="200" y="88" font-family="Georgia, serif" font-size="10"
+      font-weight="300" font-style="normal"
+      letter-spacing="6" text-anchor="middle" fill="#E8E0D0"
+      >BERLIN SEIT 1853</text>
+    
+      <line x1="80" y1="30" x2="320" y2="30" stroke="#E8E0D0" stroke-width="0.5" opacity="0.5"/>
+      <line x1="80" y1="100" x2="320" y2="100" stroke="#E8E0D0" stroke-width="0.5" opacity="0.5"/>
+    
+</svg>
