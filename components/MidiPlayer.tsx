@@ -30,13 +30,19 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
   const loadedRef    = useRef(false);
   const durationRef  = useRef(0); // ref para evitar stale closure en el RAF
 
+  // Helper seguro para detener el Part evitando el error de tiempo negativo
+  const safePart = {
+    stop: () => { try { partRef.current?.stop("+0"); } catch {} },
+    dispose: () => { try { partRef.current?.dispose(); } catch {} },
+  };
+
   // Limpiar al desmontar
   useEffect(() => {
     return () => {
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
-      partRef.current?.stop();
-      partRef.current?.dispose();
-      samplerRef.current?.dispose();
+      safePart.stop();
+      safePart.dispose();
+      try { samplerRef.current?.dispose(); } catch {}
     };
   }, []);
 
@@ -91,8 +97,8 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
       const midi   = await parseMidi(midiPath);
 
       // Limpiar part anterior
-      partRef.current?.stop();
-      partRef.current?.dispose();
+      safePart.stop();
+      safePart.dispose();
 
       const totalDur = midi.duration;
       setDuration(totalDur);
@@ -149,9 +155,9 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
   };
 
   const handleStop = () => {
-    toneRef.current?.getTransport().stop();
-    toneRef.current?.getTransport().cancel();
-    partRef.current?.stop();
+    try { toneRef.current?.getTransport().stop(); } catch {}
+    try { toneRef.current?.getTransport().cancel(); } catch {}
+    safePart.stop();
     setState("idle");
     setProgress(0);
     cancelAnimationFrame(rafRef.current);
