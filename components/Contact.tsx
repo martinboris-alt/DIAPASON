@@ -104,8 +104,8 @@ export default function Contact() {
                 <ContactInfo
                   icon={<PhoneIcon />}
                   label="Teléfono / WhatsApp"
-                  value="+XX XXX XXX XXXX"
-                  href="https://wa.me/XXXXXXXXXXX"
+                  value="+56 9 8670 2647"
+                  href="https://wa.me/56986702647"
                 />
                 <ContactInfo
                   icon={<MailIcon />}
@@ -128,7 +128,7 @@ export default function Contact() {
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/XXXXXXXXXXX?text=Hola%20Diego%2C%20me%20interesa%20un%20servicio%20de%20afinaci%C3%B3n."
+                href="https://wa.me/56986702647?text=Hola%20Diego%2C%20me%20interesa%20un%20servicio%20de%20afinaci%C3%B3n."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 mt-4 px-6 py-3 bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] text-xs tracking-widest uppercase hover:bg-[#25D366]/20 transition-all duration-300 w-fit"
@@ -200,7 +200,7 @@ export default function Contact() {
                       type="tel"
                       value={form.phone}
                       onChange={handleChange}
-                      placeholder="+XX XXX XXXX"
+                      placeholder="+56 9 XXXX XXXX"
                       className={inputClass}
                     />
                   </div>
