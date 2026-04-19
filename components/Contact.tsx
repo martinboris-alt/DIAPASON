@@ -68,7 +68,7 @@ export default function Contact() {
   };
 
   const inputClass =
-    "w-full bg-transparent border-b border-white/15 px-0 py-3 text-white-warm placeholder-white/25 text-sm focus:outline-none focus:border-gold transition-colors duration-300 font-light tracking-wide";
+    "w-full bg-transparent border-b border-white-warm/20 px-0 py-3 text-white-warm placeholder-white-warm/40 text-sm focus:outline-none focus:border-gold transition-colors duration-300 font-light tracking-wide";
 
   return (
     <section id="contacto" ref={sectionRef} className="py-28 px-6 bg-piano-black">
@@ -95,7 +95,7 @@ export default function Contact() {
               className="contact-anim flex flex-col gap-6"
               style={{ opacity: 0, transform: "translateY(30px)", transition: "opacity 0.7s ease, transform 0.7s ease" }}
             >
-              <p className="text-white-soft/60 font-light leading-relaxed text-sm">
+              <p className="text-white-soft/70 font-light leading-relaxed text-sm">
                 Cuéntame sobre tu piano y lo que necesitas. Me pondré en contacto contigo
                 a la brevedad para coordinar una visita.
               </p>
@@ -144,7 +144,7 @@ export default function Contact() {
               <div className="h-full flex flex-col items-center justify-center text-center py-16 border border-gold/20">
                 <div className="text-gold text-4xl mb-4">✓</div>
                 <h3 className="font-display text-2xl text-white-warm mb-3">Mensaje recibido</h3>
-                <p className="text-white/50 text-sm font-light">Me pondré en contacto contigo pronto.</p>
+                <p className="text-white-soft/70 text-sm font-light">Me pondré en contacto contigo pronto.</p>
                 <button
                   onClick={() => setStatus("idle")}
                   className="mt-6 text-xs tracking-widest uppercase text-gold/60 hover:text-gold transition-colors"
@@ -156,7 +156,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="flex flex-col gap-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div>
-                    <label className="text-[10px] tracking-widest uppercase text-white/30 block mb-2">
+                    <label className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
                       Nombre *
                     </label>
                     <input
@@ -169,7 +169,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] tracking-widest uppercase text-white/30 block mb-2">
+                    <label className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
                       Correo *
                     </label>
                     <input
@@ -186,7 +186,7 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div>
-                    <label className="text-[10px] tracking-widest uppercase text-white/30 block mb-2">
+                    <label className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
                       Teléfono
                     </label>
                     <input
@@ -199,7 +199,7 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] tracking-widest uppercase text-white/30 block mb-2">
+                    <label className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
                       Servicio
                     </label>
                     <select
@@ -207,12 +207,13 @@ export default function Contact() {
                       value={form.service}
                       onChange={handleChange}
                       className={`${inputClass} appearance-none`}
+                      style={{ background: "var(--color-piano-black)" }}
                     >
-                      <option value="" className="bg-piano-black">
+                      <option value="" style={{ background: "var(--color-piano-black)" }}>
                         Seleccionar...
                       </option>
                       {services.map((s) => (
-                        <option key={s} value={s} className="bg-piano-black">
+                        <option key={s} value={s} style={{ background: "var(--color-piano-black)" }}>
                           {s}
                         </option>
                       ))}
@@ -221,7 +222,7 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="text-[10px] tracking-widest uppercase text-white/30 block mb-2">
+                  <label className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
                     Mensaje *
                   </label>
                   <textarea
@@ -236,7 +237,7 @@ export default function Contact() {
                 </div>
 
                 {status === "error" && (
-                  <p className="text-red-400/80 text-xs tracking-wide">
+                  <p className="text-red-500/80 text-xs tracking-wide">
                     Hubo un error. Por favor intenta de nuevo o escríbeme por WhatsApp.
                   </p>
                 )}
@@ -272,8 +273,8 @@ function ContactInfo({
     <div className="flex items-start gap-4 group">
       <div className="text-gold/50 group-hover:text-gold transition-colors mt-0.5">{icon}</div>
       <div>
-        <p className="text-[10px] tracking-widest uppercase text-white/30 mb-1">{label}</p>
-        <p className="text-white-soft/70 text-sm font-light">{value}</p>
+        <p className="text-[10px] tracking-widest uppercase text-white-warm/50 mb-1">{label}</p>
+        <p className="text-white-soft/80 text-sm font-light">{value}</p>
       </div>
     </div>
   );

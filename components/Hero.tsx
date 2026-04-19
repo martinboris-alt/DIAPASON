@@ -77,7 +77,7 @@ export default function Hero() {
             onClick={() => {
               document.querySelector("#servicios")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="px-8 py-4 border border-white/20 text-white-warm text-xs tracking-widest uppercase font-light hover:border-gold/60 hover:text-gold transition-all duration-300"
+            className="px-8 py-4 border border-white-warm/30 text-white-warm text-xs tracking-widest uppercase font-light hover:border-gold/60 hover:text-gold transition-all duration-300"
           >
             Ver Servicios
           </button>
@@ -86,7 +86,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-10">
-        <span className="text-[10px] tracking-[0.3em] uppercase text-white/30">Scroll</span>
+        <span className="text-[10px] tracking-[0.3em] uppercase text-white-warm/40">Scroll</span>
         <div className="w-px h-10 bg-gradient-to-b from-gold/60 to-transparent animate-pulse" />
       </div>
     </section>

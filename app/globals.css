@@ -1,27 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --gold: #C9A84C;
-  --gold-light: #E2C97E;
-  --gold-dark: #9A7A2E;
-  --black: #0A0A0A;
-  --black-soft: #111111;
-  --black-mid: #1C1C1C;
-  --white-warm: #F5F0E8;
-  --white-soft: #E8E0D0;
+/* ── Tailwind registra los tokens con valores de modo claro por defecto ── */
+@theme {
+  --color-piano-black:      #F5F0E8;
+  --color-piano-black-soft: #EDE8DE;
+  --color-piano-black-mid:  #E2DAD0;
+  --color-white-warm:       #1A1A1A;
+  --color-white-soft:       #3A3232;
+  --color-gold:             #8A6820;
+  --color-gold-light:       #B8920E;
+  --color-gold-dark:        #6A4E10;
+  --font-display:           var(--font-playfair);
+  --font-body:              var(--font-inter);
 }
 
-@theme inline {
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
-  --color-gold-dark: var(--gold-dark);
-  --color-piano-black: var(--black);
-  --color-piano-black-soft: var(--black-soft);
-  --color-piano-black-mid: var(--black-mid);
-  --color-white-warm: var(--white-warm);
-  --color-white-soft: var(--white-soft);
-  --font-display: var(--font-playfair);
-  --font-body: var(--font-inter);
+/* ── Modo oscuro: sobreescribe los CSS vars generados por @theme ── */
+.dark {
+  --color-piano-black:      #0A0A0A;
+  --color-piano-black-soft: #111111;
+  --color-piano-black-mid:  #1C1C1C;
+  --color-white-warm:       #F5F0E8;
+  --color-white-soft:       #E8E0D0;
+  --color-gold:             #C9A84C;
+  --color-gold-light:       #E2C97E;
+  --color-gold-dark:        #9A7A2E;
 }
 
 html {
@@ -29,65 +31,36 @@ html {
 }
 
 body {
-  background: var(--black);
-  color: var(--white-warm);
+  background: var(--color-piano-black);
+  color: var(--color-white-warm);
   font-family: var(--font-inter), Arial, sans-serif;
   overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Transición suave en todos los fondos al cambiar tema */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+/* Excluir animaciones propias de transición (no interferir) */
+.no-theme-transition, .no-theme-transition * {
+  transition: none !important;
 }
 
 .font-display {
   font-family: var(--font-playfair), Georgia, serif;
 }
 
-.gold-gradient {
-  background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.gold-line {
-  position: relative;
-}
-
-.gold-line::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--gold), transparent);
-  margin-top: 1rem;
-}
-
-.gold-line-center::after {
-  margin-left: auto;
-  margin-right: auto;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-}
-
 /* Scroll bar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--black);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--gold-dark);
-  border-radius: 3px;
-}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-piano-black); }
+::-webkit-scrollbar-thumb { background: var(--color-gold-dark); border-radius: 3px; }
 
 /* Selection */
 ::selection {
-  background: rgba(201, 168, 76, 0.3);
-  color: var(--white-warm);
-}
-
-/* Smooth image reveal */
-.img-reveal {
-  clip-path: inset(0 100% 0 0);
-  transition: clip-path 0.8s ease;
-}
-.img-reveal.revealed {
-  clip-path: inset(0 0% 0 0);
+  background: rgba(201, 168, 76, 0.25);
+  color: var(--color-white-warm);
 }

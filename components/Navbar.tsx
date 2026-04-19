@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const links = [
   { label: "Servicios", href: "#servicios" },
@@ -13,6 +13,10 @@ const links = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -60,9 +64,21 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
             </button>
           ))}
+          {/* Theme toggle */}
+          {mounted && (
+            <button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              className="text-gold/60 hover:text-gold transition-colors duration-300 p-1"
+              aria-label="Cambiar tema"
+              title={theme === "dark" ? "Modo claro" : "Modo oscuro"}
+            >
+              {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+            </button>
+          )}
+
           <button
             onClick={() => handleNav("#contacto")}
-            className="ml-4 px-6 py-2 border border-gold/60 text-gold text-xs tracking-widest uppercase hover:bg-gold hover:text-piano-black transition-all duration-300"
+            className="ml-2 px-6 py-2 border border-gold/60 text-gold text-xs tracking-widest uppercase hover:bg-gold hover:text-piano-black transition-all duration-300"
           >
             Solicitar servicio
           </button>
@@ -97,19 +113,54 @@ export default function Navbar() {
             <button
               key={l.href}
               onClick={() => handleNav(l.href)}
-              className="text-left text-sm tracking-widest uppercase text-white-soft/70 hover:text-gold transition-colors duration-300 py-2 border-b border-white/5"
+              className="text-left text-sm tracking-widest uppercase text-white-soft/70 hover:text-gold transition-colors duration-300 py-2 border-b border-white-warm/10"
             >
               {l.label}
             </button>
           ))}
-          <button
-            onClick={() => handleNav("#contacto")}
-            className="mt-2 px-6 py-3 border border-gold/60 text-gold text-xs tracking-widest uppercase hover:bg-gold hover:text-piano-black transition-all duration-300"
-          >
-            Solicitar servicio
-          </button>
+          <div className="flex items-center justify-between mt-2">
+            <button
+              onClick={() => handleNav("#contacto")}
+              className="px-6 py-3 border border-gold/60 text-gold text-xs tracking-widest uppercase hover:bg-gold hover:text-piano-black transition-all duration-300"
+            >
+              Solicitar servicio
+            </button>
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                className="flex items-center gap-2 text-xs tracking-widest uppercase text-gold/60 hover:text-gold transition-colors"
+              >
+                {theme === "dark" ? <SunIcon /> : <MoonIcon />}
+                {theme === "dark" ? "Modo claro" : "Modo oscuro"}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </header>
+  );
+}
+
+function SunIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </svg>
+  );
+}
+
+function MoonIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4">
+      <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+    </svg>
   );
 }

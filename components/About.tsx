@@ -62,7 +62,7 @@ export default function About() {
             {/* Floating stat card */}
             <div className="absolute -bottom-6 -right-6 bg-piano-black border border-gold/20 p-6 hidden md:block">
               <p className="font-display text-3xl font-semibold text-gold">A440</p>
-              <p className="text-xs tracking-widest uppercase text-white/50 mt-1">Estándar Internacional</p>
+              <p className="text-xs tracking-widest uppercase text-white-warm/50 mt-1">Estándar Internacional</p>
             </div>
           </div>
 
@@ -109,7 +109,7 @@ export default function About() {
 
             {/* Stats */}
             <div
-              className="about-anim grid grid-cols-3 gap-6 pt-8 border-t border-white/10"
+              className="about-anim grid grid-cols-3 gap-6 pt-8 border-t border-white-warm/10"
               style={{
                 opacity: 0,
                 transform: "translateY(30px)",
@@ -119,7 +119,7 @@ export default function About() {
               {stats.map((s, i) => (
                 <div key={i} className="text-center">
                   <p className="font-display text-2xl md:text-3xl font-semibold text-gold">{s.value}</p>
-                  <p className="text-xs tracking-wide text-white/40 uppercase mt-1 leading-tight">{s.label}</p>
+                  <p className="text-xs tracking-wide text-white-warm/50 uppercase mt-1 leading-tight">{s.label}</p>
                 </div>
               ))}
             </div>
@@ -133,7 +133,7 @@ export default function About() {
                 transition: "opacity 0.8s ease, transform 0.8s ease",
               }}
             >
-              <p className="text-xs tracking-[0.3em] uppercase text-white/30 mb-3">
+              <p className="text-xs tracking-[0.3em] uppercase text-white-warm/50 mb-3">
                 Certificaciones y formación
               </p>
               <div className="flex flex-wrap gap-3">
