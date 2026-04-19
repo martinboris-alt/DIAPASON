@@ -15,7 +15,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Alemán",
     bio: "Considerado el mayor compositor del período barroco y uno de los más influyentes de la historia de la música occidental. Bach dominó todas las formas musicales de su época con una profundidad intelectual y espiritual sin igual. Su obra para teclado —preludios, fugas, invenciones y suites— sigue siendo el fundamento del estudio pianístico moderno.",
     estilo: "Barroco · Contrapunto · Polifonía",
-    portrait: "/images/composers/bach.svg",
+    portrait: "/images/composers/bach.jpg",
     color: "#C9A84C",
   },
   "Georg Friedrich Händel": {
@@ -24,7 +24,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Alemán-Británico",
     bio: "Contemporáneo de Bach, Händel desarrolló su carrera principalmente en Inglaterra y se convirtió en uno de los maestros del Barroco internacional. Aunque célebre por sus oratorios, su música para teclado muestra una elegancia y accesibilidad características de su estilo cosmopolita.",
     estilo: "Barroco · Elegancia melódica",
-    portrait: "/images/composers/handel.svg",
+    portrait: "/images/composers/handel.jpg",
     color: "#A08040",
   },
   "Domenico Scarlatti": {
@@ -42,7 +42,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Austriaco",
     bio: "Llamado el 'Padre de la Sinfonía', Haydn fue el arquitecto del estilo clásico. Pasó casi treinta años al servicio de la familia Esterházy, componiendo con disciplina y humor. Sus sonatas para piano, llenas de sorpresas e ingenio, fueron clave en la evolución del instrumento.",
     estilo: "Clásico · Forma sonata · Humor musical",
-    portrait: "/images/composers/haydn.svg",
+    portrait: "/images/composers/haydn.jpg",
     color: "#7090B0",
   },
   "Wolfgang A. Mozart": {
@@ -51,7 +51,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Austriaco",
     bio: "Niño prodigio que se convirtió en símbolo de la perfección clásica. Mozart escribió más de 20 sonatas para piano, numerosas fantasías y una serie de conciertos que siguen siendo cumbres del repertorio. Su música combina profundidad emocional con una claridad formal que parece sin esfuerzo.",
     estilo: "Clásico · Gracia melódica · Arquitectura formal",
-    portrait: "/images/composers/mozart.svg",
+    portrait: "/images/composers/mozart.jpg",
     color: "#6080C0",
   },
   "Ludwig van Beethoven": {
@@ -60,7 +60,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Alemán",
     bio: "El puente entre el Clasicismo y el Romanticismo. A pesar de perder la audición progresivamente, Beethoven compuso algunas de las obras más poderosas de la historia, incluidas 32 sonatas para piano que exploran todo el rango expresivo del instrumento. Su lucha personal se convirtió en arte universal.",
     estilo: "Clásico-Romántico · Drama · Innovación formal",
-    portrait: "/images/composers/beethoven.svg",
+    portrait: "/images/composers/beethoven.jpg",
     color: "#8060A0",
   },
   "Franz Schubert": {
@@ -69,7 +69,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Austriaco",
     bio: "En tan solo 31 años, Schubert creó un catálogo extraordinario que incluye sonatas, impromptus y momentos musicales de belleza lírica inigualable. Su música para piano está impregnada de una melancolía vienesa que anticipa el Romanticismo tardío con una espontaneidad única.",
     estilo: "Romántico temprano · Lirismo · Melancolía",
-    portrait: "/images/composers/schubert.svg",
+    portrait: "/images/composers/schubert.jpg",
     color: "#5090A0",
   },
   "Frédéric Chopin": {
@@ -78,7 +78,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Polaco-Francés",
     bio: "El poeta del piano por excelencia. Chopin dedicó casi toda su obra al instrumento, creando nocturnos, estudios, preludios y baladas que redefinen el lirismo pianístico. Vivió gran parte de su vida en París, donde su salón fue el epicentro de la vida musical romántica.",
     estilo: "Romántico · Bel canto pianístico · Ornamentación",
-    portrait: "/images/composers/chopin.svg",
+    portrait: "/images/composers/chopin.jpg",
     color: "#9060A0",
   },
   "Robert Schumann": {
@@ -87,7 +87,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Alemán",
     bio: "Compositor, pianista y crítico musical, Schumann es una de las figuras más complejas del Romanticismo. Sus ciclos para piano —Carnaval, Escenas infantiles, Kreisleriana— son retratos íntimos de personajes y estados de ánimo, con una originalidad armónica que influyó profundamente en la música posterior.",
     estilo: "Romántico · Ciclos programáticos · Introspección",
-    portrait: "/images/composers/schumann.svg",
+    portrait: "/images/composers/schumann.jpg",
     color: "#A07040",
   },
   "Franz Liszt": {
@@ -96,7 +96,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Húngaro",
     bio: "El pianista más virtuoso de su época, Liszt revolucionó la técnica pianística y creó el concepto del recital moderno. Su música va desde estudios de trascendencia extrema hasta páginas de profunda espiritualidad, pasando por las evocadoras Rapsodias Húngaras que capturan el alma de su pueblo.",
     estilo: "Romántico · Virtuosismo extremo · Programa musical",
-    portrait: "/images/composers/liszt.svg",
+    portrait: "/images/composers/liszt.jpg",
     color: "#C06040",
   },
   "Johannes Brahms": {
@@ -105,7 +105,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Alemán",
     bio: "Brahms fue el guardián de la forma clásica en la era romántica. Su música para piano, densa y meditativa, une la rigurosa arquitectura de Bach y Beethoven con el lirismo de su propio tiempo. Sus intermezzi tardíos son conversaciones íntimas de incomparable profundidad.",
     estilo: "Romántico · Rigor formal · Densidad armónica",
-    portrait: "/images/composers/brahms.svg",
+    portrait: "/images/composers/brahms.jpg",
     color: "#806050",
   },
   "Edvard Grieg": {
@@ -114,7 +114,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Noruego",
     bio: "El gran representante del nacionalismo musical escandinavo. Las Piezas Líricas de Grieg —66 miniaturas para piano en diez volúmenes— son instantáneas poéticas de paisajes, danzas y estados de ánimo nórdicos. Su Concierto para piano en La menor es uno de los más populares del repertorio.",
     estilo: "Romántico tardío · Nacionalismo nórdico · Miniaturismo",
-    portrait: "/images/composers/grieg.svg",
+    portrait: "/images/composers/grieg.jpg",
     color: "#408080",
   },
   "Piotr I. Tchaikovsky": {
@@ -123,7 +123,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Ruso",
     bio: "El compositor ruso más internacional del siglo XIX. Aunque célebre por sus ballets y sinfonías, Tchaikovsky escribió ciclos pianísticos de gran encanto melódico. Las Estaciones, doce piezas que evocan los meses del año, son su obra más popular para piano.",
     estilo: "Romántico · Melodismo ruso · Orquestación colorística",
-    portrait: "/images/composers/tchaikovsky.svg",
+    portrait: "/images/composers/tchaikovsky.jpg",
     color: "#5060A0",
   },
   "Erik Satie": {
@@ -132,7 +132,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Francés",
     bio: "Excéntrico y visionario, Satie fue uno de los compositores más originales de su tiempo. Sus Gymnopédies y Gnossiennes anticiparon el minimalismo y la música ambiente con décadas de adelanto. Despojó a la música de todo ornamento superfluo, creando un mundo sonoro propio, silencioso y contemplativo.",
     estilo: "Moderno temprano · Minimalismo · Humor dadaísta",
-    portrait: "/images/composers/satie.svg",
+    portrait: "/images/composers/satie.jpg",
     color: "#608040",
   },
   "Claude Debussy": {
@@ -141,7 +141,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Francés",
     bio: "Fundador del impresionismo musical, Debussy transformó el lenguaje armónico de la música occidental. Su piano es un instrumento de luz y color: escalas de tonos enteros, acordes en paralelo y texturas etéreas crean paisajes sonoros de extraordinaria belleza. Clair de Lune es una de las páginas más amadas de la música clásica.",
     estilo: "Impresionismo · Simbolismo · Timbre como forma",
-    portrait: "/images/composers/debussy.svg",
+    portrait: "/images/composers/debussy.jpg",
     color: "#4080A0",
   },
   "Maurice Ravel": {
@@ -159,7 +159,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Estadounidense",
     bio: "El 'Rey del Ragtime', Joplin elevó la música popular afroamericana a la categoría de arte. Sus rags —Maple Leaf Rag, The Entertainer, Elite Syncopations— combinan ritmos sincopados irresistibles con una elegancia formal que los distingue de la música de baile ordinaria. Pionero ignorado en vida, hoy es símbolo del patrimonio musical americano.",
     estilo: "Ragtime · Jazz temprano · Sincopación",
-    portrait: "/images/composers/joplin.svg",
+    portrait: "/images/composers/joplin.jpg",
     color: "#C08040",
   },
   "Béla Bartók": {
@@ -168,7 +168,7 @@ export const composers: Record<string, ComposerInfo> = {
     nacionalidad: "Húngaro",
     bio: "Etnomusicólogo y compositor vanguardista, Bartók fusionó las tradiciones folclóricas de Hungría, Rumanía y Bulgaria con el lenguaje moderno. Su Mikrokosmos —153 piezas progresivas— es una de las colecciones pedagógicas más importantes del siglo XX, llevando al piano desde lo más simple hasta lo más complejo.",
     estilo: "Moderno · Folclore · Politonalidad",
-    portrait: "/images/composers/bartok.svg",
+    portrait: "/images/composers/bartok.jpg",
     color: "#A04040",
   },
   "Sergei Prokofiev": {

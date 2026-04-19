@@ -63,14 +63,14 @@ function PartituraCard({ p }: { p: PartituraItem }) {
 
         {/* Portrait */}
         {info?.portrait && (
-          <div className="shrink-0 w-14 h-14 rounded-full overflow-hidden border border-white-warm/10">
+          <div className="shrink-0 w-16 h-16 rounded-full overflow-hidden border border-gold/20 bg-piano-black-mid">
             <Image
               src={info.portrait}
               alt={p.compositor}
-              width={56}
-              height={56}
+              width={128}
+              height={128}
               className="w-full h-full object-cover"
-              unoptimized
+              unoptimized={info.portrait.endsWith(".svg")}
             />
           </div>
         )}
