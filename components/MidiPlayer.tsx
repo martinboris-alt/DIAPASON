@@ -4,7 +4,8 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { usePlayerContext } from "@/context/PlayerContext";
 
-const PdfViewer = dynamic(() => import("@/components/PdfViewer"), { ssr: false });
+const PdfViewer      = dynamic(() => import("@/components/PdfViewer"), { ssr: false });
+const PianoKeyboard  = dynamic(() => import("@/components/PianoKeyboard"), { ssr: false });
 
 interface Props {
   midiPath: string;
@@ -22,6 +23,8 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
   const [tempo, setTempo]       = useState(1);
   const [volume, setVolume]     = useState(0.8);
   const [showPdf, setShowPdf]   = useState(false);
+  const [showKeys, setShowKeys] = useState(true);
+  const [activeNotes, setActiveNotes] = useState<Set<string>>(new Set());
 
   const { register, requestPlay } = usePlayerContext();
 
@@ -34,6 +37,8 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
   const durationRef  = useRef(0);  // transport-duration (a 1× tempo)
   const baseBpmRef   = useRef(120); // BPM original del MIDI
   const tempoRef     = useRef(1);   // multiplicador actual de tempo
+  const notesRef     = useRef<Array<{ time: number; duration: number; name: string }>>([]);
+  const activeNotesRef = useRef<Set<string>>(new Set());
 
   // Helper seguro para detener el Part evitando el error de tiempo negativo
   const safePart = {
@@ -131,6 +136,13 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
       }
       notes.sort((a, b) => a.time - b.time);
 
+      // Guardar notas para el teclado visual (normalizar el nombre)
+      notesRef.current = notes.map(n => ({
+        time: n.time,
+        duration: n.duration,
+        name: n.note.replace(/s/i, "#"), // "Cs4" → "C#4"
+      }));
+
       // Crear Part de Tone
       const part = new Tone.Part((time, note) => {
         sampler.triggerAttackRelease(note.note, note.duration, time, note.velocity);
@@ -181,14 +193,39 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
     safePart.stop();
     setState("idle");
     setProgress(0);
+    setActiveNotes(new Set());
+    activeNotesRef.current = new Set();
     cancelAnimationFrame(rafRef.current);
   };
 
   const animateProgress = () => {
+    let startIdx = 0; // puntero al primer índice cuyas notas podrían estar activas
+
     const tick = () => {
       const pos = toneRef.current?.getTransport().seconds ?? 0;
-      const dur = durationRef.current; // leer siempre el valor actual via ref
+      const dur = durationRef.current;
       setProgress(dur > 0 ? Math.min(pos / dur, 1) : 0);
+
+      // Calcular notas activas: time ≤ pos < time + duration
+      const notes = notesRef.current;
+      const next = new Set<string>();
+      // Avanzar el puntero hasta notas que aún podrían estar activas
+      while (startIdx < notes.length && notes[startIdx].time + notes[startIdx].duration < pos) {
+        startIdx++;
+      }
+      for (let i = startIdx; i < notes.length; i++) {
+        const n = notes[i];
+        if (n.time > pos) break; // sorted, no more active notes after this
+        if (pos < n.time + n.duration) next.add(n.name);
+      }
+
+      // Solo actualizar estado si cambió
+      const prev = activeNotesRef.current;
+      if (next.size !== prev.size || !Array.from(next).every(n => prev.has(n))) {
+        activeNotesRef.current = next;
+        setActiveNotes(next);
+      }
+
       rafRef.current = requestAnimationFrame(tick);
     };
     rafRef.current = requestAnimationFrame(tick);
@@ -254,6 +291,25 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
           <span className="text-[10px] tracking-widest uppercase text-red-400/70">MIDI no disponible</span>
         )}
 
+        {/* Botón teclado */}
+        <button
+          onClick={() => setShowKeys(v => !v)}
+          className={`shrink-0 inline-flex items-center gap-1.5 text-[10px] tracking-widest uppercase border px-3 py-1.5 transition-all duration-200 ${
+            showKeys
+              ? "border-gold/60 text-gold bg-gold/10"
+              : "border-white-warm/15 text-white-warm/40 hover:border-gold/30 hover:text-gold"
+          }`}
+          title={showKeys ? "Ocultar teclado" : "Ver teclado"}
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3 h-3">
+            <rect x="2" y="6" width="20" height="12" rx="1"/>
+            <line x1="7"  y1="6" x2="7"  y2="14"/>
+            <line x1="12" y1="6" x2="12" y2="14"/>
+            <line x1="17" y1="6" x2="17" y2="14"/>
+          </svg>
+          <span className="hidden sm:inline">Teclado</span>
+        </button>
+
         {/* Botón ver partitura */}
         <button
           onClick={() => setShowPdf(v => !v)}
@@ -282,6 +338,16 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
             pdfPath={pdfPath}
             progress={progress}
             isPlaying={state === "playing"}
+          />
+        </div>
+      )}
+
+      {/* Teclado MIDI visual */}
+      {showKeys && (
+        <div className="border-b border-white-warm/5 p-2">
+          <PianoKeyboard
+            activeNotes={activeNotes}
+            autoScroll={state === "playing"}
           />
         </div>
       )}
