@@ -31,7 +31,23 @@ export default function PartiturasPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-piano-black pt-24">
+      <main className="min-h-screen bg-piano-black pt-24 relative">
+
+        {/* Background image with elegant gradient fade */}
+        <div
+          className="pointer-events-none fixed inset-0 z-0 opacity-[0.07]"
+          style={{
+            backgroundImage: "url('/images/partitura-bg.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            maskImage: "linear-gradient(to bottom, black 0%, black 25%, transparent 75%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 25%, transparent 75%)",
+          }}
+        />
+
+        {/* Relative wrapper for content above background */}
+        <div className="relative z-10">
 
         {/* Header */}
         <div className="max-w-7xl mx-auto px-6 py-16 border-b border-white-warm/5">
@@ -113,6 +129,7 @@ export default function PartiturasPage() {
             className="inline-block mt-4 px-8 py-4 bg-gold text-piano-black text-xs tracking-widest uppercase font-medium hover:bg-gold-light transition-all duration-300">
             Solicitar afinación
           </a>
+        </div>
         </div>
       </main>
       <Footer />

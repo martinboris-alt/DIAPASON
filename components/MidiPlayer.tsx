@@ -31,7 +31,9 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
   const startTimeRef = useRef(0);
   const rafRef       = useRef<number>(0);
   const loadedRef    = useRef(false);
-  const durationRef  = useRef(0); // ref para evitar stale closure en el RAF
+  const durationRef  = useRef(0);  // transport-duration (a 1× tempo)
+  const baseBpmRef   = useRef(120); // BPM original del MIDI
+  const tempoRef     = useRef(1);   // multiplicador actual de tempo
 
   // Helper seguro para detener el Part evitando el error de tiempo negativo
   const safePart = {
@@ -141,7 +143,10 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
       const transport = Tone.getTransport();
       transport.stop();
       transport.cancel();
-      transport.bpm.value = (midi.header.tempos[0]?.bpm ?? 120) * tempo;
+      const originalBpm = midi.header.tempos[0]?.bpm ?? 120;
+      baseBpmRef.current = originalBpm;
+      tempoRef.current   = tempo;
+      transport.bpm.value = originalBpm * tempo;
 
       await Tone.start();
       transport.start("+0.1");
@@ -191,9 +196,9 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
 
   const handleTempoChange = (v: number) => {
     setTempo(v);
+    tempoRef.current = v;
     if (toneRef.current) {
-      const baseBpm = 120;
-      toneRef.current.getTransport().bpm.value = baseBpm * v;
+      toneRef.current.getTransport().bpm.value = baseBpmRef.current * v;
     }
   };
 
@@ -210,7 +215,9 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
     return `${m}:${s.toString().padStart(2, "0")}`;
   };
 
-  const currentSec = progress * duration;
+  // Duración real y tiempo actual en segundos (ajustados al tempo activo)
+  const realDuration = duration / tempo;
+  const currentSec   = progress * realDuration;
 
   return (
     <div className="border border-gold/20 bg-piano-black-soft">
@@ -299,7 +306,7 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
 
         {/* Time */}
         <span className="text-[10px] text-white-warm/30 tabular-nums min-w-[60px]">
-          {formatTime(currentSec)} / {formatTime(duration)}
+          {formatTime(currentSec)} / {formatTime(realDuration)}
         </span>
 
         {/* Tempo */}
