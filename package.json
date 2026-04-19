@@ -10,12 +10,15 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@tonejs/midi": "^2.0.28",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.8.0",
     "next": "16.2.4",
     "next-themes": "^0.4.6",
+    "opensheetmusicdisplay": "^1.9.7",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "tone": "^15.1.22"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
