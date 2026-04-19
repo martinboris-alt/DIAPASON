@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { sobreMiFoto } from "@/config/fotos";
 
 const stats = [
   { value: "10+", label: "Años de experiencia" },
@@ -47,10 +48,9 @@ export default function About() {
           >
             <div className="relative aspect-[3/4] max-w-md">
               <Image
-                src="/images/about-placeholder.svg"
-                alt="Diego Juica — Afinador de pianos"
+                src={sobreMiFoto.src}
+                alt={sobreMiFoto.alt}
                 fill
-                unoptimized
                 className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />

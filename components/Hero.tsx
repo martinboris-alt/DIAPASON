@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { heroFoto } from "@/config/fotos";
 
 export default function Hero() {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -24,13 +25,12 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/placeholder-hero.svg"
-          alt="Piano de cola"
+          src={heroFoto.src}
+          alt={heroFoto.alt}
           fill
           priority
           className="object-cover object-center"
           sizes="100vw"
-          unoptimized
         />
         {/* Dark overlay with gradient */}
         <div className="absolute inset-0 bg-gradient-to-b from-piano-black/70 via-piano-black/50 to-piano-black" />

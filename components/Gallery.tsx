@@ -2,45 +2,18 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { galeriaFotos } from "@/config/fotos";
 
-const photos = [
-  {
-    src: "/images/gallery-1.svg",
-    alt: "Afinación de piano de cola",
-    caption: "Piano de cola Steinway & Sons",
-    span: "col-span-1 row-span-2",
-  },
-  {
-    src: "/images/gallery-2.svg",
-    alt: "Detalle de cuerdas del piano",
-    caption: "Cuerdas y martillos",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    src: "/images/gallery-3.svg",
-    alt: "Mecanismo del piano",
-    caption: "Regulación de mecanismo",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    src: "/images/gallery-4.svg",
-    alt: "Piano vertical en sala",
-    caption: "Piano vertical clásico",
-    span: "col-span-2 row-span-1",
-  },
-  {
-    src: "/images/gallery-5.svg",
-    alt: "Trabajo de afinación",
-    caption: "Proceso de afinación",
-    span: "col-span-1 row-span-1",
-  },
-  {
-    src: "/images/gallery-6.svg",
-    alt: "Detalle de teclas",
-    caption: "Teclas restauradas",
-    span: "col-span-1 row-span-1",
-  },
-];
+const spanMap = {
+  normal: "col-span-1 row-span-1",
+  alto:   "col-span-1 row-span-2",
+  ancho:  "col-span-2 row-span-1",
+};
+
+const photos = galeriaFotos.map((f) => ({
+  ...f,
+  span: spanMap[f.span],
+}));
 
 export default function Gallery() {
   const [selected, setSelected] = useState<number | null>(null);
@@ -110,7 +83,6 @@ export default function Gallery() {
                   src={photo.src}
                   alt={photo.alt}
                   fill
-                  unoptimized
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 50vw, 33vw"
                 />
