@@ -23,6 +23,7 @@ export default function MidiPlayer({ midiPath, titulo, compositor }: Props) {
   const startTimeRef = useRef(0);
   const rafRef       = useRef<number>(0);
   const loadedRef    = useRef(false);
+  const durationRef  = useRef(0); // ref para evitar stale closure en el RAF
 
   // Limpiar al desmontar
   useEffect(() => {
@@ -90,6 +91,7 @@ export default function MidiPlayer({ midiPath, titulo, compositor }: Props) {
 
       const totalDur = midi.duration;
       setDuration(totalDur);
+      durationRef.current = totalDur; // actualizar ref inmediatamente
 
       // Construir notas de todos los tracks de piano
       const notes: Array<{ time: number; note: string; duration: number; velocity: number }> = [];
@@ -153,7 +155,8 @@ export default function MidiPlayer({ midiPath, titulo, compositor }: Props) {
   const animateProgress = () => {
     const tick = () => {
       const pos = toneRef.current?.getTransport().seconds ?? 0;
-      setProgress(duration > 0 ? Math.min(pos / duration, 1) : 0);
+      const dur = durationRef.current; // leer siempre el valor actual via ref
+      setProgress(dur > 0 ? Math.min(pos / dur, 1) : 0);
       rafRef.current = requestAnimationFrame(tick);
     };
     rafRef.current = requestAnimationFrame(tick);
