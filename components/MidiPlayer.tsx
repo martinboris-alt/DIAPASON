@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import dynamic from "next/dynamic";
+import { usePlayerContext } from "@/context/PlayerContext";
 
 const PdfViewer = dynamic(() => import("@/components/PdfViewer"), { ssr: false });
 
@@ -22,6 +23,8 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
   const [volume, setVolume]     = useState(0.8);
   const [showPdf, setShowPdf]   = useState(false);
 
+  const { register, requestPlay } = usePlayerContext();
+
   const toneRef      = useRef<typeof import("tone") | null>(null);
   const samplerRef   = useRef<InstanceType<typeof import("tone").Sampler> | null>(null);
   const partRef      = useRef<InstanceType<typeof import("tone").Part> | null>(null);
@@ -37,14 +40,25 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
   };
 
   // Limpiar al desmontar
+  // Registrar este player en el contexto global con su función de stop
   useEffect(() => {
+    const unregister = register(midiPath, () => {
+      cancelAnimationFrame(rafRef.current);
+      safePart.stop();
+      try { toneRef.current?.getTransport().stop(); } catch {}
+      try { toneRef.current?.getTransport().cancel(); } catch {}
+      setState("idle");
+      setProgress(0);
+    });
     return () => {
+      unregister();
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       safePart.stop();
       safePart.dispose();
       try { samplerRef.current?.dispose(); } catch {}
     };
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [midiPath]);
 
   const loadTone = useCallback(async () => {
     if (toneRef.current) return toneRef.current;
@@ -81,6 +95,8 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
   }, []);
 
   const handlePlay = async () => {
+    // Avisar al contexto: detener cualquier otro player activo
+    requestPlay(midiPath);
     if (state === "paused" && partRef.current) {
       const Tone = toneRef.current!;
       await Tone.start();

@@ -4,6 +4,7 @@ import path from "path";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CatalogClient, { type PartituraItem } from "./CatalogClient";
+import { PlayerProvider } from "@/context/PlayerContext";
 
 export const metadata: Metadata = {
   title: "Partituras Gratis de Piano — Diapasón",
@@ -97,7 +98,9 @@ export default function PartiturasPage() {
               </p>
             </div>
           ) : (
-            <CatalogClient partituras={partituras} />
+            <PlayerProvider>
+              <CatalogClient partituras={partituras} />
+            </PlayerProvider>
           )}
         </div>
 
