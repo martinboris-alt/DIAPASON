@@ -59,11 +59,11 @@ function PartituraCard({ p }: { p: PartituraItem }) {
     <div className={`bg-piano-black flex flex-col border-b border-white-warm/5 transition-all duration-300 ${expanded ? "bg-piano-black-soft" : "hover:bg-piano-black-soft"}`}>
 
       {/* Main row */}
-      <div className="flex items-start gap-4 p-5">
+      <div className="flex items-start gap-3 sm:gap-4 p-4 sm:p-5 flex-wrap sm:flex-nowrap">
 
         {/* Portrait */}
         {info?.portrait && (
-          <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border border-gold/20 bg-piano-black-mid">
+          <div className="shrink-0 w-14 h-14 sm:w-20 sm:h-20 rounded-full overflow-hidden border border-gold/20 bg-piano-black-mid">
             <Image
               src={info.portrait}
               alt={p.compositor}
@@ -82,17 +82,17 @@ function PartituraCard({ p }: { p: PartituraItem }) {
               {p.periodo}
             </span>
           </div>
-          <h3 className="font-display text-sm font-semibold text-white-warm leading-snug truncate">
+          <h3 className="font-display text-sm font-semibold text-white-warm leading-snug line-clamp-2 break-words">
             {titulo}
           </h3>
-          <p className="text-xs text-gold/60 mt-0.5">{p.compositor}</p>
+          <p className="text-xs text-gold/60 mt-0.5 truncate">{p.compositor}</p>
           {info && (
-            <p className="text-[10px] text-white-warm/25 mt-0.5 tracking-wide">{info.vida} · {info.nacionalidad}</p>
+            <p className="text-[10px] text-white-warm/25 mt-0.5 tracking-wide truncate">{info.vida} · {info.nacionalidad}</p>
           )}
         </div>
 
         {/* Actions */}
-        <div className="shrink-0 flex flex-col items-end gap-2">
+        <div className="shrink-0 flex flex-row sm:flex-col items-end gap-2 w-full sm:w-auto basis-full sm:basis-auto justify-end">
           <a
             href={p.localPath}
             download={p.filename}

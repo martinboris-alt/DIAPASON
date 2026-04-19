@@ -50,7 +50,7 @@ export default function Gallery() {
 
   return (
     <>
-      <section id="galeria" ref={sectionRef} className="py-28 px-6 bg-piano-black">
+      <section id="galeria" ref={sectionRef} className="py-20 sm:py-28 px-6 bg-piano-black">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-20">
@@ -157,13 +157,15 @@ export default function Gallery() {
 
             {/* Arrows */}
             <button
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-white-warm/60 hover:text-gold transition-colors p-2 text-2xl"
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-auto sm:h-auto flex items-center justify-center bg-piano-black/50 sm:bg-transparent rounded-full text-white-warm/80 hover:text-gold transition-colors text-2xl touch-manipulation"
+              aria-label="Anterior"
               onClick={() => setSelected((selected - 1 + galeriaMedia.length) % galeriaMedia.length)}
             >
               ←
             </button>
             <button
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white-warm/60 hover:text-gold transition-colors p-2 text-2xl"
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-auto sm:h-auto flex items-center justify-center bg-piano-black/50 sm:bg-transparent rounded-full text-white-warm/80 hover:text-gold transition-colors text-2xl touch-manipulation"
+              aria-label="Siguiente"
               onClick={() => setSelected((selected + 1) % galeriaMedia.length)}
             >
               →
@@ -171,7 +173,7 @@ export default function Gallery() {
 
             {/* Close */}
             <button
-              className="absolute -top-10 right-0 text-white-warm/50 hover:text-gold transition-colors text-sm tracking-widest uppercase"
+              className="absolute -top-12 sm:-top-10 right-0 text-white-warm/70 hover:text-gold transition-colors text-xs sm:text-sm tracking-widest uppercase px-3 py-2 touch-manipulation"
               onClick={() => setSelected(null)}
             >
               Cerrar ×

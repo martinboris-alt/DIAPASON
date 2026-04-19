@@ -86,7 +86,7 @@ export default function PianoAnatomy() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-28 px-6 bg-piano-black-soft overflow-hidden">
+    <section ref={sectionRef} className="py-20 sm:py-28 px-6 bg-piano-black-soft overflow-hidden">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}

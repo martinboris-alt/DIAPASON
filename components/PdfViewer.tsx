@@ -19,6 +19,19 @@ export default function PdfViewer({ pdfPath, progress, isPlaying }: Props) {
   const [width, setWidth]           = useState(600);
   const [manualOverride, setManual] = useState(false);
 
+  // Ajustar ancho inicial según viewport
+  useEffect(() => {
+    const setResponsiveWidth = () => {
+      const vw = window.innerWidth;
+      if (vw < 640)      setWidth(Math.min(vw - 40, 400));
+      else if (vw < 1024) setWidth(500);
+      else                setWidth(600);
+    };
+    setResponsiveWidth();
+    window.addEventListener("resize", setResponsiveWidth);
+    return () => window.removeEventListener("resize", setResponsiveWidth);
+  }, []);
+
   // Calcular página automáticamente basándose en el progreso
   useEffect(() => {
     if (manualOverride || numPages === 0) return;
@@ -54,7 +67,7 @@ export default function PdfViewer({ pdfPath, progress, isPlaying }: Props) {
           <button
             onClick={() => goTo(currentPage - 1)}
             disabled={currentPage <= 1}
-            className="w-7 h-7 flex items-center justify-center border border-white-warm/10 text-white-warm/40 hover:text-gold hover:border-gold/30 transition-colors disabled:opacity-20"
+            className="w-9 h-9 sm:w-7 sm:h-7 flex items-center justify-center border border-white-warm/10 text-white-warm/40 hover:text-gold hover:border-gold/30 transition-colors disabled:opacity-20 touch-manipulation"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3 h-3">
               <polyline points="15 18 9 12 15 6"/>
@@ -78,7 +91,7 @@ export default function PdfViewer({ pdfPath, progress, isPlaying }: Props) {
           <button
             onClick={() => goTo(currentPage + 1)}
             disabled={currentPage >= numPages}
-            className="w-7 h-7 flex items-center justify-center border border-white-warm/10 text-white-warm/40 hover:text-gold hover:border-gold/30 transition-colors disabled:opacity-20"
+            className="w-9 h-9 sm:w-7 sm:h-7 flex items-center justify-center border border-white-warm/10 text-white-warm/40 hover:text-gold hover:border-gold/30 transition-colors disabled:opacity-20 touch-manipulation"
           >
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3 h-3">
               <polyline points="9 18 15 12 9 6"/>

@@ -110,20 +110,20 @@ export default function MarcasPage() {
               {/* Lado derecho: contenido */}
               <div className="flex flex-col">
                 {/* Numeración + nombre */}
-                <div className="flex items-baseline gap-4 mb-2">
+                <div className="flex items-baseline gap-3 sm:gap-4 mb-2 flex-wrap">
                   <span
-                    className="font-display text-5xl font-light opacity-20"
+                    className="font-display text-4xl sm:text-5xl font-light opacity-20"
                     style={{ color: marca.acento }}
                   >
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <h2 className="font-display text-3xl md:text-4xl font-semibold text-white-warm">
+                  <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-semibold text-white-warm">
                     {marca.nombre}
                   </h2>
                 </div>
 
                 <p
-                  className="font-display italic text-sm mb-6 pl-16"
+                  className="font-display italic text-sm mb-6 pl-0 sm:pl-16"
                   style={{ color: marca.acento }}
                 >
                   « {marca.lema} »
@@ -133,12 +133,12 @@ export default function MarcasPage() {
                 <div className="w-16 h-px bg-gradient-to-r from-gold/60 to-transparent mb-6 ml-16" />
 
                 {/* Historia */}
-                <p className="text-white-soft/75 text-sm md:text-base font-light leading-relaxed mb-8 pl-16">
+                <p className="text-white-soft/75 text-sm md:text-base font-light leading-relaxed mb-8 pl-0 sm:pl-16">
                   {marca.historia}
                 </p>
 
                 {/* Innovaciones */}
-                <div className="pl-16 mb-8">
+                <div className="pl-0 sm:pl-16 mb-8">
                   <p className="text-[10px] tracking-[0.3em] uppercase text-gold mb-4">
                     Innovaciones y legado
                   </p>
@@ -156,7 +156,7 @@ export default function MarcasPage() {
                 </div>
 
                 {/* Usuarios famosos */}
-                <div className="pl-16">
+                <div className="pl-0 sm:pl-16">
                   <p className="text-[10px] tracking-[0.3em] uppercase text-gold mb-3">
                     Intérpretes legendarios
                   </p>

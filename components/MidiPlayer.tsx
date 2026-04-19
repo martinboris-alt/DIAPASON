@@ -294,59 +294,59 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
       />
 
       {/* Controls */}
-      <div className="flex items-center gap-4 px-5 py-3">
+      <div className="flex flex-wrap items-center gap-3 sm:gap-4 px-4 sm:px-5 py-3">
         {/* Play/Pause/Stop */}
         <div className="flex items-center gap-2">
           {state === "playing" ? (
             <button onClick={handlePause}
-              className="w-8 h-8 flex items-center justify-center border border-gold/40 text-gold hover:bg-gold/10 transition-colors">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
+              className="w-10 h-10 sm:w-9 sm:h-9 flex items-center justify-center border border-gold/40 text-gold hover:bg-gold/10 transition-colors touch-manipulation">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
                 <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
               </svg>
             </button>
           ) : (
             <button onClick={handlePlay} disabled={state === "loading"}
-              className="w-8 h-8 flex items-center justify-center bg-gold text-piano-black hover:bg-gold-light transition-colors disabled:opacity-40">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3 ml-0.5">
+              className="w-10 h-10 sm:w-9 sm:h-9 flex items-center justify-center bg-gold text-piano-black hover:bg-gold-light transition-colors disabled:opacity-40 touch-manipulation">
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 ml-0.5">
                 <polygon points="5,3 19,12 5,21"/>
               </svg>
             </button>
           )}
           <button onClick={handleStop} disabled={state === "idle" || state === "loading"}
-            className="w-7 h-7 flex items-center justify-center border border-white-warm/10 text-white-warm/30 hover:text-gold hover:border-gold/30 transition-colors disabled:opacity-20">
-            <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5">
+            className="w-9 h-9 sm:w-8 sm:h-8 flex items-center justify-center border border-white-warm/10 text-white-warm/30 hover:text-gold hover:border-gold/30 transition-colors disabled:opacity-20 touch-manipulation">
+            <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
               <rect x="4" y="4" width="16" height="16"/>
             </svg>
           </button>
         </div>
 
         {/* Time */}
-        <span className="text-[10px] text-white-warm/30 tabular-nums min-w-[60px]">
+        <span className="text-[10px] text-white-warm/30 tabular-nums">
           {formatTime(currentSec)} / {formatTime(realDuration)}
         </span>
 
         {/* Tempo */}
-        <div className="flex items-center gap-2 ml-auto">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3 h-3 text-white-warm/20 shrink-0">
+        <div className="flex items-center gap-2 sm:ml-auto order-3 sm:order-none basis-full sm:basis-auto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3.5 h-3.5 text-white-warm/30 shrink-0">
             <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48 2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48 2.83-2.83"/>
           </svg>
           <input type="range" min="0.4" max="2" step="0.1" value={tempo}
             onChange={e => handleTempoChange(Number(e.target.value))}
-            className="w-16 accent-gold h-1 cursor-pointer"
+            className="flex-1 sm:w-20 sm:flex-none accent-gold h-1.5 cursor-pointer touch-manipulation"
             title={`Tempo: ${Math.round(tempo * 100)}%`}
           />
-          <span className="text-[10px] text-white-warm/25 w-8">{Math.round(tempo * 100)}%</span>
+          <span className="text-[10px] text-white-warm/40 w-9 tabular-nums">{Math.round(tempo * 100)}%</span>
         </div>
 
         {/* Volume */}
-        <div className="flex items-center gap-2">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3 h-3 text-white-warm/20 shrink-0">
+        <div className="flex items-center gap-2 order-4 sm:order-none basis-full sm:basis-auto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3.5 h-3.5 text-white-warm/30 shrink-0">
             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
             <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
           </svg>
           <input type="range" min="0" max="1" step="0.05" value={volume}
             onChange={e => handleVolumeChange(Number(e.target.value))}
-            className="w-16 accent-gold h-1 cursor-pointer"
+            className="flex-1 sm:w-20 sm:flex-none accent-gold h-1.5 cursor-pointer touch-manipulation"
             title="Volumen"
           />
         </div>

@@ -76,7 +76,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="servicios" ref={sectionRef} className="py-28 px-6 bg-piano-black-soft">
+    <section id="servicios" ref={sectionRef} className="py-20 sm:py-28 px-6 bg-piano-black-soft">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">

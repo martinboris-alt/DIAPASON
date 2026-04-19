@@ -71,7 +71,7 @@ export default function Contact() {
     "w-full bg-transparent border-b border-white-warm/20 px-0 py-3 text-white-warm placeholder-white-warm/40 text-sm focus:outline-none focus:border-gold transition-colors duration-300 font-light tracking-wide";
 
   return (
-    <section id="contacto" ref={sectionRef} className="py-28 px-6 bg-piano-black">
+    <section id="contacto" ref={sectionRef} className="py-20 sm:py-28 px-6 bg-piano-black">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           {/* Left info */}

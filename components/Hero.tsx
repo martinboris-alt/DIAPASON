@@ -52,7 +52,7 @@ export default function Hero() {
 
         <h1
           ref={titleRef}
-          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold text-white-warm leading-tight mb-6"
+          className="font-display text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold text-white-warm leading-[1.05] mb-6"
         >
           El Arte de la
           <br />
