@@ -17,7 +17,19 @@ function loadCatalog(): PartituraItem[] {
   const catalogPath = path.join(process.cwd(), "config", "mutopia-catalog.json");
   if (!fs.existsSync(catalogPath)) return [];
   try {
-    return JSON.parse(fs.readFileSync(catalogPath, "utf-8")) as PartituraItem[];
+    const raw = JSON.parse(fs.readFileSync(catalogPath, "utf-8")) as PartituraItem[];
+    const publicDir = path.join(process.cwd(), "public");
+    // Si el MIDI referenciado no existe físicamente, quitamos el midiPath
+    // para que el botón "Escuchar" no aparezca
+    return raw.map(p => {
+      if (!p.midiPath) return p;
+      const midiFile = path.join(publicDir, p.midiPath.replace(/^\//, ""));
+      if (!fs.existsSync(midiFile)) {
+        const { midiPath: _removed, ...rest } = p;
+        return rest as PartituraItem;
+      }
+      return p;
+    });
   } catch {
     return [];
   }
