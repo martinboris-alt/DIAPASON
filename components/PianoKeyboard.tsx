@@ -2,11 +2,48 @@
 
 import { useMemo, useEffect, useRef, useState } from "react";
 
+export type Hand = "right" | "left";
+
 export interface PianoNote {
   time:     number;
   duration: number;
   name:     string; // "C#4", "A4", etc.
+  hand?:    Hand;   // "right" | "left" (opcional)
 }
+
+// Paleta por mano
+const HAND_COLORS = {
+  right: {
+    // Dorado cálido
+    edge:      "rgba(201,168,76,0.55)",
+    light:     "rgba(226,201,126,0.95)",
+    base:      "rgba(201,168,76,0.85)",
+    glow:      "rgba(201,168,76,0.7)",
+    glowSoft:  "rgba(201,168,76,0.25)",
+    whiteFrom: "from-gold/80",
+    whiteTo:   "to-gold",
+    blackFrom: "from-gold-dark",
+    blackTo:   "to-gold",
+    shadowWhite: "shadow-[inset_0_-6px_12px_rgba(201,168,76,0.4),0_0_12px_rgba(201,168,76,0.3)]",
+    shadowBlack: "shadow-[inset_0_-4px_8px_rgba(201,168,76,0.5),0_0_10px_rgba(201,168,76,0.4)]",
+    labelColor: "#E2C97E",
+  },
+  left: {
+    // Turquesa frío
+    edge:      "rgba(77,170,191,0.55)",
+    light:     "rgba(127,210,226,0.95)",
+    base:      "rgba(77,170,191,0.85)",
+    glow:      "rgba(77,170,191,0.7)",
+    glowSoft:  "rgba(77,170,191,0.25)",
+    whiteFrom: "from-[#7ED2E2]/80",
+    whiteTo:   "to-[#4DAABF]",
+    blackFrom: "from-[#2E7A8B]",
+    blackTo:   "to-[#4DAABF]",
+    shadowWhite: "shadow-[inset_0_-6px_12px_rgba(77,170,191,0.4),0_0_12px_rgba(77,170,191,0.3)]",
+    shadowBlack: "shadow-[inset_0_-4px_8px_rgba(77,170,191,0.5),0_0_10px_rgba(77,170,191,0.4)]",
+    labelColor: "#7FD2E2",
+  },
+} as const;
 
 interface Props {
   notes:           PianoNote[];
@@ -82,15 +119,16 @@ export default function PianoKeyboard({
   const containerRef = useRef<HTMLDivElement>(null);
   const keyboardRef  = useRef<HTMLDivElement>(null);
   const fallRef      = useRef<HTMLDivElement>(null);
-  const [activeNotes, setActiveNotes] = useState<Set<string>>(new Set());
-  const activeNotesRef = useRef<Set<string>>(new Set());
+  /** Mapa: nombre de nota → mano que la está tocando ("right" | "left" | "both") */
+  const [activeMap, setActiveMap] = useState<Map<string, Hand | "both">>(new Map());
+  const activeMapRef = useRef<Map<string, Hand | "both">>(new Map());
   const startIdxRef = useRef(0);
   const rafRef = useRef<number>(0);
 
   // Pre-ordenar notas normalizadas y pre-calcular layout
   const orderedNotes = useMemo(() => {
     return notes
-      .map(n => ({ ...n, name: norm(n.name) }))
+      .map(n => ({ ...n, name: norm(n.name), hand: n.hand ?? "right" }))
       .filter(n => noteLayout[n.name])
       .sort((a, b) => a.time - b.time);
   }, [notes, noteLayout]);
@@ -105,42 +143,50 @@ export default function PianoKeyboard({
     const tick = () => {
       const t = currentTimeRef.current ?? 0;
 
-      // ── Notas activas (las que están sonando en este momento)
+      // ── Notas activas (las que están sonando en este momento) con mano
       while (startIdxRef.current < orderedNotes.length &&
              orderedNotes[startIdxRef.current].time + orderedNotes[startIdxRef.current].duration < t) {
         startIdxRef.current++;
       }
-      const newActive = new Set<string>();
+      const newActive = new Map<string, Hand | "both">();
       for (let i = startIdxRef.current; i < orderedNotes.length; i++) {
         const n = orderedNotes[i];
         if (n.time > t) break;
-        if (t < n.time + n.duration) newActive.add(n.name);
+        if (t < n.time + n.duration) {
+          const prev = newActive.get(n.name);
+          if (!prev) newActive.set(n.name, n.hand);
+          else if (prev !== n.hand) newActive.set(n.name, "both");
+        }
       }
-      const prev = activeNotesRef.current;
-      if (newActive.size !== prev.size || !Array.from(newActive).every(n => prev.has(n))) {
-        activeNotesRef.current = newActive;
-        setActiveNotes(newActive);
+      // Sólo actualizar estado si cambió
+      const prev = activeMapRef.current;
+      let changed = newActive.size !== prev.size;
+      if (!changed) {
+        for (const [k, v] of newActive) {
+          if (prev.get(k) !== v) { changed = true; break; }
+        }
+      }
+      if (changed) {
+        activeMapRef.current = newActive;
+        setActiveMap(newActive);
       }
 
-      // ── Caída 3D: posicionar notas que están dentro de la ventana visual
+      // ── Caída 3D: posicionar notas dentro de la ventana visual, coloreadas por mano
       const fall = fallRef.current;
       if (fall) {
-        // Borrar y regenerar: buscar notas con t <= note.time <= t + lookAhead
-        // Usamos transforms directos para eficiencia
         const children = fall.children;
         let childIdx = 0;
         for (let i = startIdxRef.current; i < orderedNotes.length; i++) {
           const n = orderedNotes[i];
           const delta = n.time - t;
           if (delta > lookAhead) break;
-          if (n.time + n.duration < t) continue; // ya pasó
+          if (n.time + n.duration < t) continue;
           const layout = noteLayout[n.name];
           if (!layout) continue;
 
-          // Si delta > 0: aún no empezó, bajando
-          // Si delta <= 0: ya está sonando (parte en el teclado)
-          const topPct    = Math.max(0, (1 - delta / lookAhead)) * 100; // 0 arriba, 100 pegado al teclado
           const heightPct = (n.duration / lookAhead) * 100;
+          const colors = HAND_COLORS[n.hand];
+          const almostPlaying = delta < 0.15;
 
           let el = children[childIdx] as HTMLDivElement | undefined;
           if (!el) {
@@ -152,17 +198,17 @@ export default function PianoKeyboard({
           el.style.width  = `${layout.width}%`;
           el.style.bottom = `${(delta / lookAhead) * 100}%`;
           el.style.height = `${heightPct}%`;
+          // Gradiente segun mano y tipo de tecla
           el.style.background = layout.isBlack
-            ? "linear-gradient(to bottom, rgba(201,168,76,0.9), rgba(154,122,46,0.8))"
-            : "linear-gradient(to bottom, rgba(226,201,126,0.95), rgba(201,168,76,0.85))";
-          el.style.boxShadow = delta < 0.15
-            ? "0 0 18px rgba(201,168,76,0.7), inset 0 1px 0 rgba(255,255,255,0.3)"
-            : "0 0 6px rgba(201,168,76,0.25), inset 0 1px 0 rgba(255,255,255,0.2)";
-          el.style.border = "1px solid rgba(201,168,76,0.5)";
+            ? `linear-gradient(to bottom, ${colors.base}, ${colors.base})`
+            : `linear-gradient(to bottom, ${colors.light}, ${colors.base})`;
+          el.style.boxShadow = almostPlaying
+            ? `0 0 18px ${colors.glow}, inset 0 1px 0 rgba(255,255,255,0.3)`
+            : `0 0 6px ${colors.glowSoft}, inset 0 1px 0 rgba(255,255,255,0.2)`;
+          el.style.border = `1px solid ${colors.edge}`;
           el.style.display = "block";
           childIdx++;
         }
-        // Ocultar los sobrantes
         for (let i = childIdx; i < children.length; i++) {
           (children[i] as HTMLElement).style.display = "none";
         }
@@ -181,8 +227,8 @@ export default function PianoKeyboard({
   // Si deja de reproducirse, limpiar teclas activas y el panel de caída
   useEffect(() => {
     if (!isPlaying) {
-      activeNotesRef.current = new Set();
-      setActiveNotes(new Set());
+      activeMapRef.current = new Map();
+      setActiveMap(new Map());
       startIdxRef.current = 0;
       if (fallRef.current) {
         for (const c of Array.from(fallRef.current.children)) {
@@ -194,9 +240,9 @@ export default function PianoKeyboard({
 
   // Auto-scroll hacia la zona activa
   useEffect(() => {
-    if (!autoScroll || activeNotes.size === 0) return;
+    if (!autoScroll || activeMap.size === 0) return;
     const container = containerRef.current;
-    const firstActive = Array.from(activeNotes)[0];
+    const firstActive = Array.from(activeMap.keys())[0];
     if (!container || !firstActive) return;
     const keyEl = container.querySelector<HTMLElement>(`[data-note="${firstActive}"]`);
     if (!keyEl) return;
@@ -205,11 +251,24 @@ export default function PianoKeyboard({
     if (kRect.left < cRect.left || kRect.right > cRect.right) {
       keyEl.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
     }
-  }, [activeNotes, autoScroll]);
+  }, [activeMap, autoScroll]);
 
-  const isActive = (note: string) => activeNotes.has(note);
+  const getHand = (note: string): Hand | "both" | undefined => activeMap.get(note);
 
   return (
+    <div className="w-full">
+      {/* Leyenda de manos */}
+      <div className="flex items-center justify-center gap-5 mb-2 text-[10px] tracking-widest uppercase">
+        <span className="flex items-center gap-2 text-white-warm/50">
+          <span className="w-3 h-3 rounded-sm bg-gradient-to-b from-gold/90 to-gold" />
+          Mano derecha
+        </span>
+        <span className="flex items-center gap-2 text-white-warm/50">
+          <span className="w-3 h-3 rounded-sm bg-gradient-to-b from-[#7ED2E2] to-[#4DAABF]" />
+          Mano izquierda
+        </span>
+      </div>
+
     <div
       ref={containerRef}
       className="relative w-full overflow-x-auto bg-piano-black-mid border border-white-warm/10 scroll-smooth"
@@ -247,16 +306,17 @@ export default function PianoKeyboard({
           {/* Teclas blancas */}
           <div className="absolute inset-0 flex">
             {whiteKeys.map(k => {
-              const active = isActive(k.note);
+              const hand = getHand(k.note);
+              const whiteClass = !hand ? "bg-white-warm"
+                : hand === "both"
+                  // Split visual: dorado arriba, turquesa abajo
+                  ? `bg-gradient-to-b from-gold via-gold to-[#4DAABF] shadow-[inset_0_-6px_12px_rgba(201,168,76,0.4),0_0_12px_rgba(201,168,76,0.3)]`
+                  : `bg-gradient-to-b ${HAND_COLORS[hand].whiteFrom} ${HAND_COLORS[hand].whiteTo} ${HAND_COLORS[hand].shadowWhite}`;
               return (
                 <div
                   key={k.note}
                   data-note={k.note}
-                  className={`flex-1 border-r border-piano-black/40 relative transition-colors duration-75 ${
-                    active
-                      ? "bg-gradient-to-b from-gold/80 to-gold shadow-[inset_0_-6px_12px_rgba(201,168,76,0.4),0_0_12px_rgba(201,168,76,0.3)]"
-                      : "bg-white-warm"
-                  }`}
+                  className={`flex-1 border-r border-piano-black/40 relative transition-colors duration-75 ${whiteClass}`}
                 >
                   {k.note === "C4" && (
                     <span className="absolute bottom-1 left-1/2 -translate-x-1/2 text-[7px] tracking-wider text-piano-black/40 font-medium">
@@ -273,16 +333,16 @@ export default function PianoKeyboard({
             if (!k.isBlack) return null;
             const layout = noteLayout[k.note];
             if (!layout) return null;
-            const active = isActive(k.note);
+            const hand = getHand(k.note);
+            const blackClass = !hand ? "bg-piano-black"
+              : hand === "both"
+                ? `bg-gradient-to-b from-gold via-gold-dark to-[#4DAABF] shadow-[inset_0_-4px_8px_rgba(201,168,76,0.5),0_0_10px_rgba(201,168,76,0.4)]`
+                : `bg-gradient-to-b ${HAND_COLORS[hand].blackFrom} ${HAND_COLORS[hand].blackTo} ${HAND_COLORS[hand].shadowBlack}`;
             return (
               <div
                 key={k.note}
                 data-note={k.note}
-                className={`absolute top-0 h-[62%] transition-colors duration-75 z-10 border border-piano-black/80 ${
-                  active
-                    ? "bg-gradient-to-b from-gold-dark to-gold shadow-[inset_0_-4px_8px_rgba(201,168,76,0.5),0_0_10px_rgba(201,168,76,0.4)]"
-                    : "bg-piano-black"
-                }`}
+                className={`absolute top-0 h-[62%] transition-colors duration-75 z-10 border border-piano-black/80 ${blackClass}`}
                 style={{
                   left: `${layout.left}%`,
                   width: `${layout.width}%`,
@@ -292,6 +352,7 @@ export default function PianoKeyboard({
           })}
         </div>
       </div>
+    </div>
     </div>
   );
 }

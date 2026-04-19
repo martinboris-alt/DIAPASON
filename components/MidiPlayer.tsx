@@ -36,7 +36,7 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
   const durationRef  = useRef(0);  // transport-duration (a 1× tempo)
   const baseBpmRef   = useRef(120); // BPM original del MIDI
   const tempoRef     = useRef(1);   // multiplicador actual de tempo
-  const notesRef     = useRef<Array<{ time: number; duration: number; name: string }>>([]);
+  const notesRef     = useRef<Array<{ time: number; duration: number; name: string; hand: "right" | "left" }>>([]);
   const currentTimeRef = useRef(0); // tiempo compensado para sync visual
 
   // Helper seguro para detener el Part evitando el error de tiempo negativo
@@ -127,19 +127,47 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
       durationRef.current = totalDur; // actualizar ref inmediatamente
 
       // Construir notas de todos los tracks de piano
-      const notes: Array<{ time: number; note: string; duration: number; velocity: number }> = [];
-      for (const track of midi.tracks) {
-        for (const n of track.notes) {
-          notes.push({ time: n.time, note: n.name, duration: n.duration, velocity: n.velocity });
-        }
+      // Detectar tracks con notas y decidir asignación de manos
+      const tracksWithNotes = midi.tracks.filter(t => t.notes.length > 0);
+      let rightTrackIdx = 0; // índice del track que es "mano derecha"
+      const useTrackSplit = tracksWithNotes.length === 2;
+
+      if (useTrackSplit) {
+        // El track con mayor altura media es la mano derecha
+        const avgPitch = (track: typeof tracksWithNotes[0]) =>
+          track.notes.reduce((a, n) => a + n.midi, 0) / track.notes.length;
+        rightTrackIdx = avgPitch(tracksWithNotes[0]) >= avgPitch(tracksWithNotes[1]) ? 0 : 1;
       }
+
+      // Construir notas con asignación de mano
+      const notes: Array<{
+        time: number; note: string; duration: number; velocity: number;
+        midi: number; hand: "right" | "left";
+      }> = [];
+
+      tracksWithNotes.forEach((track, trackIdx) => {
+        for (const n of track.notes) {
+          let hand: "right" | "left";
+          if (useTrackSplit) {
+            hand = trackIdx === rightTrackIdx ? "right" : "left";
+          } else {
+            // Un solo track: separar por altura (C4 = MIDI 60 como pivote)
+            hand = n.midi >= 60 ? "right" : "left";
+          }
+          notes.push({
+            time: n.time, note: n.name, duration: n.duration,
+            velocity: n.velocity, midi: n.midi, hand,
+          });
+        }
+      });
       notes.sort((a, b) => a.time - b.time);
 
-      // Guardar notas para el teclado visual (normalizar el nombre)
+      // Guardar notas para el teclado visual (normalizar el nombre + incluir hand)
       notesRef.current = notes.map(n => ({
         time: n.time,
         duration: n.duration,
         name: n.note.replace(/s/i, "#"), // "Cs4" → "C#4"
+        hand: n.hand,
       }));
 
       // Crear Part de Tone
