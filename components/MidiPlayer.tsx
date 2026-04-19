@@ -194,6 +194,23 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
     rafRef.current = requestAnimationFrame(tick);
   };
 
+  // Salta a una posición 0–1 de la canción
+  const handleSeek = (ratio: number) => {
+    const dur = durationRef.current;
+    if (!toneRef.current || !partRef.current || dur === 0) return;
+    const clamped = Math.max(0, Math.min(ratio, 0.999));
+    const target  = clamped * dur;
+
+    try {
+      const Tone = toneRef.current;
+      const transport = Tone.getTransport();
+      // Silenciar notas sonando para evitar que queden "colgadas"
+      try { samplerRef.current?.releaseAll(); } catch {}
+      transport.seconds = target;
+      setProgress(clamped);
+    } catch (e) { console.error(e); }
+  };
+
   const handleTempoChange = (v: number) => {
     setTempo(v);
     tempoRef.current = v;
@@ -270,12 +287,11 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
       )}
 
       {/* Progress bar */}
-      <div className="h-1 bg-white-warm/5 relative">
-        <div
-          className="h-full bg-gradient-to-r from-gold/60 to-gold transition-all duration-100"
-          style={{ width: `${progress * 100}%` }}
-        />
-      </div>
+      <ProgressSlider
+        progress={progress}
+        disabled={duration === 0 || state === "loading"}
+        onSeek={handleSeek}
+      />
 
       {/* Controls */}
       <div className="flex items-center gap-4 px-5 py-3">
@@ -341,6 +357,86 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
           <p className="text-[10px] text-white-warm/20">
             Cargando samples de piano Salamander Grand (primera vez puede tardar ~5s)…
           </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── Slider de progreso interactivo (click + drag) ────────────────────────────
+function ProgressSlider({
+  progress, disabled, onSeek,
+}: {
+  progress: number;
+  disabled: boolean;
+  onSeek: (r: number) => void;
+}) {
+  const [dragging, setDragging] = useState(false);
+  const [hoverRatio, setHover]  = useState<number | null>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  const getRatio = (clientX: number): number => {
+    const el = trackRef.current;
+    if (!el) return 0;
+    const rect = el.getBoundingClientRect();
+    return Math.max(0, Math.min((clientX - rect.left) / rect.width, 1));
+  };
+
+  useEffect(() => {
+    if (!dragging) return;
+    const onMove = (e: PointerEvent) => setHover(getRatio(e.clientX));
+    const onUp   = (e: PointerEvent) => {
+      onSeek(getRatio(e.clientX));
+      setDragging(false);
+      setHover(null);
+    };
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+    return () => {
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onUp);
+    };
+  }, [dragging, onSeek]);
+
+  const displayRatio = hoverRatio ?? progress;
+
+  return (
+    <div
+      ref={trackRef}
+      onPointerDown={(e) => {
+        if (disabled) return;
+        e.preventDefault();
+        setDragging(true);
+        setHover(getRatio(e.clientX));
+      }}
+      onPointerMove={(e) => {
+        if (disabled || dragging) return;
+        setHover(getRatio(e.clientX));
+      }}
+      onPointerLeave={() => { if (!dragging) setHover(null); }}
+      className={`group relative h-1.5 hover:h-2 bg-white-warm/10 transition-all duration-150 ${
+        disabled ? "cursor-default opacity-40" : "cursor-pointer"
+      }`}
+    >
+      {/* Fill */}
+      <div
+        className="absolute top-0 left-0 h-full bg-gradient-to-r from-gold/60 to-gold transition-[width] duration-75"
+        style={{ width: `${displayRatio * 100}%` }}
+      />
+      {/* Handle (aparece en hover o drag) */}
+      {!disabled && hoverRatio !== null && (
+        <div
+          className="absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-gold rounded-full shadow-[0_0_10px_rgba(201,168,76,0.5)] pointer-events-none"
+          style={{ left: `${displayRatio * 100}%`, transform: "translate(-50%, -50%)" }}
+        />
+      )}
+      {/* Tiempo tooltip en hover */}
+      {!disabled && hoverRatio !== null && (
+        <div
+          className="absolute -top-7 text-[10px] text-gold/70 bg-piano-black/80 px-2 py-0.5 border border-gold/20 pointer-events-none tabular-nums"
+          style={{ left: `${displayRatio * 100}%`, transform: "translateX(-50%)" }}
+        >
+          {Math.round(displayRatio * 100)}%
         </div>
       )}
     </div>
