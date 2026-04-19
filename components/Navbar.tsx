@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { useTheme } from "next-themes";
 
 const links = [
@@ -64,6 +65,13 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
             </button>
           ))}
+          <Link
+            href="/partituras"
+            className="text-sm tracking-widest uppercase text-white-soft/70 hover:text-gold transition-colors duration-300 relative group"
+          >
+            Partituras
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
+          </Link>
           {/* Theme toggle */}
           {mounted && (
             <button
@@ -118,6 +126,13 @@ export default function Navbar() {
               {l.label}
             </button>
           ))}
+          <Link
+            href="/partituras"
+            onClick={() => setOpen(false)}
+            className="text-left text-sm tracking-widest uppercase text-white-soft/70 hover:text-gold transition-colors duration-300 py-2 border-b border-white-warm/10"
+          >
+            Partituras
+          </Link>
           <div className="flex items-center justify-between mt-2">
             <button
               onClick={() => handleNav("#contacto")}
