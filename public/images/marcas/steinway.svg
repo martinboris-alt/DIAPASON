@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="260" viewBox="0 0 200 260">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1A1200" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#080808" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Fondo con degradado -->
+  <rect x="0" y="0" width="200" height="260" fill="url(#bg)"/>
+  <rect x="0" y="0" width="200" height="260" fill="url(#glow)"/>
+
+  <!-- Marco heráldico -->
+  <path d="M20 20 L180 20 L180 220 Q180 240 100 252 Q20 240 20 220 Z" fill="none" stroke="#D4AF37" stroke-width="1" opacity="0.4"/>
+  <path d="M26 26 L174 26 L174 218 Q174 234 100 246 Q26 234 26 218 Z" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- Ornamento central -->
+  <g opacity="0.85">
+    <path d="M100 40 Q85 55 82 75 Q80 95 100 100 Q120 95 118 75 Q115 55 100 40Z" fill="none" stroke="#D4AF37" stroke-width="1.5"/>
+    <line x1="90" y1="55" x2="90" y2="90" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="100" y1="50" x2="100" y2="95" stroke="#D4AF37" stroke-width="0.8"/>
+    <line x1="110" y1="55" x2="110" y2="90" stroke="#D4AF37" stroke-width="0.8"/>
+  </g>
+
+  <!-- Línea divisoria -->
+  <line x1="60" y1="130" x2="140" y2="130" stroke="#D4AF37" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Iniciales (pequeñas, abajo) -->
+  <text x="100" y="165" font-family="Georgia, serif" font-size="32" font-weight="300"
+    fill="#D4AF37" text-anchor="middle" letter-spacing="4" opacity="0.95">S&S</text>
+
+  <!-- Estrellas decorativas -->
+  <path d="M50 195 L52 199 L56 200 L52 201 L50 205 L48 201 L44 200 L48 199 Z" fill="#D4AF37" opacity="0.3"/>
+  <path d="M150 195 L152 199 L156 200 L152 201 L150 205 L148 201 L144 200 L148 199 Z" fill="#D4AF37" opacity="0.3"/>
+
+  <!-- Banda inferior ornamental -->
+  <path d="M60 215 L100 225 L140 215" fill="none" stroke="#D4AF37" stroke-width="0.6" opacity="0.4"/>
+</svg>

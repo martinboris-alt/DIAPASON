@@ -72,6 +72,13 @@ export default function Navbar() {
             Partituras
             <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
           </Link>
+          <Link
+            href="/marcas"
+            className="text-sm tracking-widest uppercase text-white-soft/70 hover:text-gold transition-colors duration-300 relative group"
+          >
+            Marcas
+            <span className="absolute -bottom-1 left-0 w-0 h-px bg-gold group-hover:w-full transition-all duration-300" />
+          </Link>
           {/* Theme toggle */}
           {mounted && (
             <button
@@ -132,6 +139,13 @@ export default function Navbar() {
             className="text-left text-sm tracking-widest uppercase text-white-soft/70 hover:text-gold transition-colors duration-300 py-2 border-b border-white-warm/10"
           >
             Partituras
+          </Link>
+          <Link
+            href="/marcas"
+            onClick={() => setOpen(false)}
+            className="text-left text-sm tracking-widest uppercase text-white-soft/70 hover:text-gold transition-colors duration-300 py-2 border-b border-white-warm/10"
+          >
+            Marcas
           </Link>
           <div className="flex items-center justify-between mt-2">
             <button

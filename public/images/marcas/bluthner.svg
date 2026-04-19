@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="260" viewBox="0 0 200 260">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1A1400" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#080808" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#C89B3B" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#C89B3B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Fondo con degradado -->
+  <rect x="0" y="0" width="200" height="260" fill="url(#bg)"/>
+  <rect x="0" y="0" width="200" height="260" fill="url(#glow)"/>
+
+  <!-- Marco heráldico -->
+  <path d="M20 20 L180 20 L180 220 Q180 240 100 252 Q20 240 20 220 Z" fill="none" stroke="#C89B3B" stroke-width="1" opacity="0.4"/>
+  <path d="M26 26 L174 26 L174 218 Q174 234 100 246 Q26 234 26 218 Z" fill="none" stroke="#C89B3B" stroke-width="0.5" opacity="0.25"/>
+
+  <!-- Ornamento central -->
+  <g opacity="0.85">
+    <path d="M100 45 L104 62 L122 62 L108 73 L113 90 L100 80 L87 90 L92 73 L78 62 L96 62 Z" fill="none" stroke="#C89B3B" stroke-width="1.5"/>
+  </g>
+
+  <!-- Línea divisoria -->
+  <line x1="60" y1="130" x2="140" y2="130" stroke="#C89B3B" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- Iniciales (pequeñas, abajo) -->
+  <text x="100" y="165" font-family="Georgia, serif" font-size="32" font-weight="300"
+    fill="#C89B3B" text-anchor="middle" letter-spacing="4" opacity="0.95">B</text>
+
+  <!-- Estrellas decorativas -->
+  <path d="M50 195 L52 199 L56 200 L52 201 L50 205 L48 201 L44 200 L48 199 Z" fill="#C89B3B" opacity="0.3"/>
+  <path d="M150 195 L152 199 L156 200 L152 201 L150 205 L148 201 L144 200 L148 199 Z" fill="#C89B3B" opacity="0.3"/>
+
+  <!-- Banda inferior ornamental -->
+  <path d="M60 215 L100 225 L140 215" fill="none" stroke="#C89B3B" stroke-width="0.6" opacity="0.4"/>
+</svg>
