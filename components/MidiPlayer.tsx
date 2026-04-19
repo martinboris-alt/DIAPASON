@@ -24,7 +24,6 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
   const [volume, setVolume]     = useState(0.8);
   const [showPdf, setShowPdf]   = useState(false);
   const [showKeys, setShowKeys] = useState(true);
-  const [activeNotes, setActiveNotes] = useState<Set<string>>(new Set());
 
   const { register, requestPlay } = usePlayerContext();
 
@@ -38,7 +37,7 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
   const baseBpmRef   = useRef(120); // BPM original del MIDI
   const tempoRef     = useRef(1);   // multiplicador actual de tempo
   const notesRef     = useRef<Array<{ time: number; duration: number; name: string }>>([]);
-  const activeNotesRef = useRef<Set<string>>(new Set());
+  const currentTimeRef = useRef(0); // tiempo compensado para sync visual
 
   // Helper seguro para detener el Part evitando el error de tiempo negativo
   const safePart = {
@@ -193,38 +192,21 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
     safePart.stop();
     setState("idle");
     setProgress(0);
-    setActiveNotes(new Set());
-    activeNotesRef.current = new Set();
+    currentTimeRef.current = 0;
     cancelAnimationFrame(rafRef.current);
   };
 
   const animateProgress = () => {
-    let startIdx = 0; // puntero al primer índice cuyas notas podrían estar activas
-
     const tick = () => {
-      const pos = toneRef.current?.getTransport().seconds ?? 0;
+      const Tone = toneRef.current;
+      const pos = Tone?.getTransport().seconds ?? 0;
+      // Compensar latencia del audio context para que lo visual coincida con lo que se oye
+      const latency = Tone?.context?.lookAhead ?? 0;
+      const visualPos = Math.max(0, pos - latency);
+      currentTimeRef.current = visualPos;
+
       const dur = durationRef.current;
       setProgress(dur > 0 ? Math.min(pos / dur, 1) : 0);
-
-      // Calcular notas activas: time ≤ pos < time + duration
-      const notes = notesRef.current;
-      const next = new Set<string>();
-      // Avanzar el puntero hasta notas que aún podrían estar activas
-      while (startIdx < notes.length && notes[startIdx].time + notes[startIdx].duration < pos) {
-        startIdx++;
-      }
-      for (let i = startIdx; i < notes.length; i++) {
-        const n = notes[i];
-        if (n.time > pos) break; // sorted, no more active notes after this
-        if (pos < n.time + n.duration) next.add(n.name);
-      }
-
-      // Solo actualizar estado si cambió
-      const prev = activeNotesRef.current;
-      if (next.size !== prev.size || !Array.from(next).every(n => prev.has(n))) {
-        activeNotesRef.current = next;
-        setActiveNotes(next);
-      }
 
       rafRef.current = requestAnimationFrame(tick);
     };
@@ -244,6 +226,7 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
       // Silenciar notas sonando para evitar que queden "colgadas"
       try { samplerRef.current?.releaseAll(); } catch {}
       transport.seconds = target;
+      currentTimeRef.current = target;
       setProgress(clamped);
     } catch (e) { console.error(e); }
   };
@@ -342,11 +325,13 @@ export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Pr
         </div>
       )}
 
-      {/* Teclado MIDI visual */}
+      {/* Teclado MIDI visual con notas cayendo */}
       {showKeys && (
         <div className="border-b border-white-warm/5 p-2">
           <PianoKeyboard
-            activeNotes={activeNotes}
+            notes={notesRef.current}
+            currentTimeRef={currentTimeRef}
+            isPlaying={state === "playing"}
             autoScroll={state === "playing"}
           />
         </div>
