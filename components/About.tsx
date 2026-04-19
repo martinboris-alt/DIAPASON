@@ -147,6 +147,32 @@ export default function About() {
                 ))}
               </div>
             </div>
+
+            {/* Instagram CTA */}
+            <div
+              className="about-anim pt-4"
+              style={{
+                opacity: 0,
+                transform: "translateY(30px)",
+                transition: "opacity 0.8s ease, transform 0.8s ease",
+              }}
+            >
+              <a
+                href="https://www.instagram.com/diegojuica/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 text-xs tracking-widest uppercase text-white-warm/60 hover:text-gold transition-colors group"
+              >
+                <span className="w-10 h-10 flex items-center justify-center border border-gold/30 group-hover:border-gold transition-colors">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                  </svg>
+                </span>
+                Sígueme en Instagram · <span className="text-gold">@diegojuica</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
