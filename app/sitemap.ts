@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import fs from "fs";
 import path from "path";
 import { partituraSlug, composerSlug } from "@/lib/slug";
+import { articles } from "@/config/blog";
 
 const BASE = "https://diapason.vercel.app";
 
@@ -26,7 +27,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/`,           lastModified: now, priority: 1.0,  changeFrequency: "weekly" },
     { url: `${BASE}/partituras`, lastModified: now, priority: 0.9,  changeFrequency: "weekly" },
     { url: `${BASE}/marcas`,     lastModified: now, priority: 0.8,  changeFrequency: "monthly" },
+    { url: `${BASE}/blog`,       lastModified: now, priority: 0.9,  changeFrequency: "weekly" },
+    { url: `${BASE}/faq`,        lastModified: now, priority: 0.8,  changeFrequency: "monthly" },
   ];
+
+  // Artículos del blog
+  const blogPages: MetadataRoute.Sitemap = articles.map(a => ({
+    url: `${BASE}/blog/${a.slug}`,
+    lastModified: a.updatedAt ?? a.publishedAt,
+    priority: 0.8,
+    changeFrequency: "monthly",
+  }));
 
   // Compositores únicos → una página cada uno
   const composers = Array.from(new Set(catalog.map(c => c.compositor)));
@@ -45,5 +56,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "yearly",
   }));
 
-  return [...staticPages, ...composerPages, ...partituraPages];
+  return [...staticPages, ...blogPages, ...composerPages, ...partituraPages];
 }

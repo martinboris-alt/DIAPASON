@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -198,10 +198,13 @@ function PartituraCard({ p }: { p: PartituraItem }) {
 
 interface Props { partituras: PartituraItem[]; }
 
+const PAGE_SIZE = 15;
+
 export default function CatalogClient({ partituras }: Props) {
   const [busqueda, setBusqueda]         = useState("");
   const [periodoActivo, setPeriodo]     = useState<Periodo | "Todos">("Todos");
   const [compositorActivo, setCompositor] = useState("Todos");
+  const [page, setPage]                 = useState(1);
 
   const listaCompositores = useMemo(() => {
     const set = new Set(partituras.map(p => p.compositor));
@@ -218,6 +221,12 @@ export default function CatalogClient({ partituras }: Props) {
       return matchQ && matchP && matchC;
     });
   }, [busqueda, periodoActivo, compositorActivo, partituras]);
+
+  // Volver a página 1 cuando cambian los filtros
+  useEffect(() => { setPage(1); }, [busqueda, periodoActivo, compositorActivo]);
+
+  const totalPages = Math.max(1, Math.ceil(resultados.length / PAGE_SIZE));
+  const pageItems  = resultados.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
   return (
     <div className="max-w-7xl mx-auto px-6 pb-28">
@@ -275,7 +284,12 @@ export default function CatalogClient({ partituras }: Props) {
       {/* Count */}
       <p className="text-xs tracking-widest uppercase text-white-warm/25 mb-4">
         {resultados.length.toLocaleString()} {resultados.length === 1 ? "partitura" : "partituras"}
-        <span className="text-white-warm/15 ml-3">· clic en ▼ más para ver bio y descripción</span>
+        {totalPages > 1 && (
+          <span className="text-white-warm/40 ml-3">
+            · página {page} de {totalPages}
+          </span>
+        )}
+        <span className="text-white-warm/15 ml-3 hidden sm:inline">· clic en ▼ más para ver bio y descripción</span>
       </p>
 
       {/* List */}
@@ -284,10 +298,88 @@ export default function CatalogClient({ partituras }: Props) {
           <p className="font-display text-2xl text-white-warm/30 italic">Sin resultados</p>
         </div>
       ) : (
-        <div className="border border-white-warm/5">
-          {resultados.map((p, i) => <PartituraCard key={i} p={p} />)}
-        </div>
+        <>
+          <div className="border border-white-warm/5">
+            {pageItems.map((p, i) => <PartituraCard key={`${page}-${i}`} p={p} />)}
+          </div>
+
+          {/* Paginación */}
+          {totalPages > 1 && (
+            <Pagination
+              page={page}
+              totalPages={totalPages}
+              onChange={(n) => {
+                setPage(n);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            />
+          )}
+        </>
       )}
+    </div>
+  );
+}
+
+// ── Paginación ───────────────────────────────────────────────────────────────
+function Pagination({
+  page, totalPages, onChange,
+}: {
+  page: number;
+  totalPages: number;
+  onChange: (n: number) => void;
+}) {
+  // Generar números de página visibles (5 alrededor de la actual + primera/última)
+  const getVisible = (): (number | "…")[] => {
+    if (totalPages <= 7) return Array.from({ length: totalPages }, (_, i) => i + 1);
+    const pages: (number | "…")[] = [1];
+    if (page > 3) pages.push("…");
+    const start = Math.max(2, page - 1);
+    const end   = Math.min(totalPages - 1, page + 1);
+    for (let i = start; i <= end; i++) pages.push(i);
+    if (page < totalPages - 2) pages.push("…");
+    pages.push(totalPages);
+    return pages;
+  };
+
+  const visible = getVisible();
+
+  return (
+    <div className="flex items-center justify-center gap-1 sm:gap-2 mt-8 flex-wrap">
+      <button
+        onClick={() => onChange(Math.max(1, page - 1))}
+        disabled={page <= 1}
+        className="px-3 py-2 text-xs tracking-widest uppercase border border-white-warm/10 text-white-warm/50 hover:border-gold/40 hover:text-gold transition-colors disabled:opacity-20 disabled:cursor-not-allowed touch-manipulation"
+      >
+        ← Anterior
+      </button>
+
+      <div className="flex items-center gap-1">
+        {visible.map((n, i) =>
+          n === "…" ? (
+            <span key={`dots-${i}`} className="px-2 text-white-warm/30 text-xs">…</span>
+          ) : (
+            <button
+              key={n}
+              onClick={() => onChange(n)}
+              className={`min-w-[36px] h-9 px-2 text-xs tracking-wide border transition-colors touch-manipulation ${
+                n === page
+                  ? "border-gold bg-gold/10 text-gold"
+                  : "border-white-warm/10 text-white-warm/50 hover:border-gold/40 hover:text-gold"
+              }`}
+            >
+              {n}
+            </button>
+          )
+        )}
+      </div>
+
+      <button
+        onClick={() => onChange(Math.min(totalPages, page + 1))}
+        disabled={page >= totalPages}
+        className="px-3 py-2 text-xs tracking-widest uppercase border border-white-warm/10 text-white-warm/50 hover:border-gold/40 hover:text-gold transition-colors disabled:opacity-20 disabled:cursor-not-allowed touch-manipulation"
+      >
+        Siguiente →
+      </button>
     </div>
   );
 }
