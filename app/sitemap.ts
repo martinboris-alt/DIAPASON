@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import { partituraSlug, composerSlug } from "@/lib/slug";
 import { articles } from "@/config/blog";
+import { marcas } from "@/config/marcas";
 
 const BASE = "https://diapason.vercel.app";
 
@@ -39,6 +40,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "monthly",
   }));
 
+  // Páginas de marcas
+  const marcaPages: MetadataRoute.Sitemap = marcas.map(m => ({
+    url: `${BASE}/marcas/${m.id}`,
+    lastModified: now,
+    priority: 0.8,
+    changeFrequency: "monthly",
+  }));
+
   // Compositores únicos → una página cada uno
   const composers = Array.from(new Set(catalog.map(c => c.compositor)));
   const composerPages: MetadataRoute.Sitemap = composers.map(c => ({
@@ -56,5 +65,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: "yearly",
   }));
 
-  return [...staticPages, ...blogPages, ...composerPages, ...partituraPages];
+  return [...staticPages, ...blogPages, ...marcaPages, ...composerPages, ...partituraPages];
 }
