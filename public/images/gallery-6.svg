@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#111111"/>
+  <rect x="40" y="40" width="720" height="520" fill="none" stroke="#C9A84C" stroke-width="0.5" opacity="0.3"/>
+  <line x1="100" y1="100" x2="700" y2="500" stroke="#C9A84C" stroke-width="0.3" opacity="0.1"/>
+  <line x1="700" y1="100" x2="100" y2="500" stroke="#C9A84C" stroke-width="0.3" opacity="0.1"/>
+  <text x="400" y="280" font-family="Georgia, serif" font-size="20" fill="#C9A84C" opacity="0.5" text-anchor="middle" font-style="italic">Foto 6</text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="12" fill="#888" text-anchor="middle">[ Reemplazar con tu foto ]</text>
+</svg>
