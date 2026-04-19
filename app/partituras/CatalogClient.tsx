@@ -138,10 +138,11 @@ function PartituraCard({ p }: { p: PartituraItem }) {
       {expanded && (
         <div className="border-t border-white-warm/5 mx-5 mb-5 pt-5 flex flex-col gap-5">
 
-          {/* MIDI Player */}
+          {/* MIDI Player + PDF Viewer */}
           {p.midiPath && (
             <MidiPlayer
               midiPath={p.midiPath}
+              pdfPath={p.localPath}
               titulo={titulo}
               compositor={p.compositor}
             />

@@ -1,21 +1,26 @@
 "use client";
 
 import { useState, useEffect, useRef, useCallback } from "react";
+import dynamic from "next/dynamic";
+
+const PdfViewer = dynamic(() => import("@/components/PdfViewer"), { ssr: false });
 
 interface Props {
   midiPath: string;
+  pdfPath:  string;
   titulo: string;
   compositor: string;
 }
 
 type PlayState = "idle" | "loading" | "playing" | "paused" | "error";
 
-export default function MidiPlayer({ midiPath, titulo, compositor }: Props) {
+export default function MidiPlayer({ midiPath, pdfPath, titulo, compositor }: Props) {
   const [state, setState]       = useState<PlayState>("idle");
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [tempo, setTempo]       = useState(1);
   const [volume, setVolume]     = useState(0.8);
+  const [showPdf, setShowPdf]   = useState(false);
 
   const toneRef      = useRef<typeof import("tone") | null>(null);
   const samplerRef   = useRef<InstanceType<typeof import("tone").Sampler> | null>(null);
@@ -202,7 +207,38 @@ export default function MidiPlayer({ midiPath, titulo, compositor }: Props) {
         {state === "error" && (
           <span className="text-[10px] tracking-widest uppercase text-red-400/70">MIDI no disponible</span>
         )}
+
+        {/* Botón ver partitura */}
+        <button
+          onClick={() => setShowPdf(v => !v)}
+          className={`shrink-0 inline-flex items-center gap-1.5 text-[10px] tracking-widest uppercase border px-3 py-1.5 transition-all duration-200 ${
+            showPdf
+              ? "border-gold/60 text-gold bg-gold/10"
+              : "border-white-warm/15 text-white-warm/40 hover:border-gold/30 hover:text-gold"
+          }`}
+          title={showPdf ? "Ocultar partitura" : "Ver partitura"}
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-3 h-3">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+          {showPdf ? "Ocultar" : "Partitura"}
+        </button>
       </div>
+
+      {/* PDF Viewer sincronizado */}
+      {showPdf && (
+        <div className="border-b border-white-warm/5">
+          <PdfViewer
+            pdfPath={pdfPath}
+            progress={progress}
+            isPlaying={state === "playing"}
+          />
+        </div>
+      )}
 
       {/* Progress bar */}
       <div className="h-1 bg-white-warm/5 relative">
