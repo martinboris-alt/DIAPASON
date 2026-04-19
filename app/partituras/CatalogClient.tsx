@@ -2,8 +2,10 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import { composers, pieceDescriptions } from "@/config/composers";
+import { partituraSlug, composerSlug } from "@/lib/slug";
 
 const MidiPlayer = dynamic(() => import("@/components/MidiPlayer"), { ssr: false });
 
@@ -83,9 +85,19 @@ function PartituraCard({ p }: { p: PartituraItem }) {
             </span>
           </div>
           <h3 className="font-display text-sm font-semibold text-white-warm leading-snug line-clamp-2 break-words">
-            {titulo}
+            <Link
+              href={`/partituras/${partituraSlug(p)}`}
+              className="hover:text-gold transition-colors"
+            >
+              {titulo}
+            </Link>
           </h3>
-          <p className="text-xs text-gold/60 mt-0.5 truncate">{p.compositor}</p>
+          <Link
+            href={`/compositores/${composerSlug(p.compositor)}`}
+            className="text-xs text-gold/60 hover:text-gold transition-colors mt-0.5 block truncate"
+          >
+            {p.compositor}
+          </Link>
           {info && (
             <p className="text-[10px] text-white-warm/25 mt-0.5 tracking-wide truncate">{info.vida} · {info.nacionalidad}</p>
           )}
