@@ -180,6 +180,167 @@ export const composers: Record<string, ComposerInfo> = {
     portrait: "/images/composers/prokofiev.svg",
     color: "#804040",
   },
+  // ── NUEVOS COMPOSITORES (info compacta sin bio completa) ─────────
+  "Carl Philipp Emanuel Bach": {
+    nombre: "Carl Philipp Emanuel Bach", vida: "1714 – 1788", nacionalidad: "Alemán",
+    bio: "Segundo hijo de J.S. Bach y puente entre el Barroco y el Clasicismo. Su Ensayo sobre la verdadera manera de tocar instrumentos de teclado fue el manual de referencia del siglo XVIII.",
+    estilo: "Pre-clásico · Empfindsamer Stil", portrait: "/images/composers/bach_cpe.svg", color: "#B89440",
+  },
+  "François Couperin": {
+    nombre: "François Couperin", vida: "1668 – 1733", nacionalidad: "Francés",
+    bio: "Maestro del clavicémbalo francés, 'Couperin le Grand' compuso 234 piezas para teclado agrupadas en ordres, miniaturas evocadoras con títulos pintorescos que anticipan la música programática.",
+    estilo: "Barroco francés · Ornamentación refinada", portrait: "/images/composers/couperin.svg", color: "#A89040",
+  },
+  "Jean-Philippe Rameau": {
+    nombre: "Jean-Philippe Rameau", vida: "1683 – 1764", nacionalidad: "Francés",
+    bio: "Compositor y teórico musical cuyo Traité de l'harmonie (1722) sigue siendo fundamento del análisis armónico. Sus piezas para clavicémbalo son pequeñas joyas de dibujo melódico y rítmico.",
+    estilo: "Barroco francés · Teoría armónica", portrait: "/images/composers/rameau.svg", color: "#C09048",
+  },
+  "Georg Philipp Telemann": {
+    nombre: "Georg Philipp Telemann", vida: "1681 – 1767", nacionalidad: "Alemán",
+    bio: "Uno de los compositores más prolíficos de la historia, admirado en su tiempo por encima de Bach. Su música para teclado es práctica, elegante y muy didáctica.",
+    estilo: "Barroco tardío · Estilo galante", portrait: "/images/composers/telemann.svg", color: "#B08838",
+  },
+  "Henry Purcell": {
+    nombre: "Henry Purcell", vida: "1658 – 1695", nacionalidad: "Inglés",
+    bio: "El mayor compositor inglés del Barroco. Su música para teclado combina la tradición inglesa con influencias francesas e italianas en un estilo único de sobria belleza.",
+    estilo: "Barroco inglés · Armonía audaz", portrait: "/images/composers/purcell.svg", color: "#A07838",
+  },
+  "Dieterich Buxtehude": {
+    nombre: "Dieterich Buxtehude", vida: "c.1637 – 1707", nacionalidad: "Alemán-Danés",
+    bio: "Organista de Lübeck cuya fama atrajo a un joven Bach a caminar 400 km para escucharle. Sus obras de teclado unen el virtuosismo norteño con una profunda expresividad espiritual.",
+    estilo: "Barroco norteño · Fantasía libre", portrait: "/images/composers/buxtehude.svg", color: "#988038",
+  },
+  "Johann Pachelbel": {
+    nombre: "Johann Pachelbel", vida: "1653 – 1706", nacionalidad: "Alemán",
+    bio: "Conocido mundialmente por su Canon en Re, Pachelbel fue un pilar de la música para órgano y teclado del sur de Alemania. Sus corales influyeron directamente en Bach.",
+    estilo: "Barroco medio · Contrapunto claro", portrait: "/images/composers/pachelbel.svg", color: "#A88030",
+  },
+  "Johann J. Froberger": {
+    nombre: "Johann Jakob Froberger", vida: "1616 – 1667", nacionalidad: "Alemán",
+    bio: "Pionero de la suite de teclado, Froberger sintetizó los estilos italiano, francés y alemán. Sus laments y tombeaux son piezas programáticas de profunda expresividad.",
+    estilo: "Barroco medio · Suite de teclado", portrait: "/images/composers/froberger.svg", color: "#A88840",
+  },
+  "Johann Kuhnau": {
+    nombre: "Johann Kuhnau", vida: "1660 – 1722", nacionalidad: "Alemán",
+    bio: "Antecesor de Bach en Leipzig, Kuhnau fue pionero de la música programática para teclado con sus Sonatas Bíblicas, que ilustran escenas del Antiguo Testamento.",
+    estilo: "Barroco · Música programática", portrait: "/images/composers/kuhnau.svg", color: "#B08830",
+  },
+  "Arcangelo Corelli": {
+    nombre: "Arcangelo Corelli", vida: "1653 – 1713", nacionalidad: "Italiano",
+    bio: "Padre del estilo barroco italiano. Aunque famoso por sus sonatas de violín, sus obras sentaron las bases tonales y formales del teclado posterior.",
+    estilo: "Barroco italiano · Arquitectura tonal", portrait: "/images/composers/corelli.svg", color: "#C09838",
+  },
+  "Antonio Vivaldi": {
+    nombre: "Antonio Vivaldi", vida: "1678 – 1741", nacionalidad: "Italiano",
+    bio: "El 'Cura Rojo' revolucionó el concierto barroco. Aunque principalmente violinista, muchas de sus obras se transcriben con éxito al piano para uso pedagógico.",
+    estilo: "Barroco italiano · Virtuosismo violinístico", portrait: "/images/composers/vivaldi.svg", color: "#B09830",
+  },
+  "Muzio Clementi": {
+    nombre: "Muzio Clementi", vida: "1752 – 1832", nacionalidad: "Italiano-Británico",
+    bio: "Conocido como 'el padre del piano', Clementi fue rival virtuosístico de Mozart y maestro de Field y Cramer. Su Gradus ad Parnassum es uno de los métodos pianísticos más influyentes.",
+    estilo: "Clásico · Virtuosismo pianístico", portrait: "/images/composers/clementi.svg", color: "#708090",
+  },
+  "Friedrich Kuhlau": {
+    nombre: "Friedrich Kuhlau", vida: "1786 – 1832", nacionalidad: "Danés-Alemán",
+    bio: "Las sonatinas de Kuhlau son un pilar de la educación pianística moderna. Accesibles y musicalmente ricas, acompañan a los estudiantes en sus primeros pasos en la forma sonata.",
+    estilo: "Clásico-Romántico · Didáctica", portrait: "/images/composers/kuhlau.svg", color: "#607890",
+  },
+  "Jan L. Dussek": {
+    nombre: "Jan Ladislav Dussek", vida: "1760 – 1812", nacionalidad: "Bohemio",
+    bio: "Virtuoso del piano forte y compositor visionario que anticipó muchos rasgos del Romanticismo. Fue el primer pianista en tocar con el instrumento en perfil hacia el público.",
+    estilo: "Clásico-Romántico · Innovación pianística", portrait: "/images/composers/dussek.svg", color: "#5878A0",
+  },
+  "Anton Diabelli": {
+    nombre: "Anton Diabelli", vida: "1781 – 1858", nacionalidad: "Austriaco",
+    bio: "Editor y compositor vienés, inmortalizado por Beethoven en sus monumentales Variaciones Diabelli sobre un tema que el propio Diabelli había enviado como encargo.",
+    estilo: "Clásico-Romántico · Música de salón", portrait: "/images/composers/diabelli.svg", color: "#7088B0",
+  },
+  "Carl Czerny": {
+    nombre: "Carl Czerny", vida: "1791 – 1857", nacionalidad: "Austriaco",
+    bio: "Alumno de Beethoven y maestro de Liszt. Compuso más de mil obras, muchas pedagógicas — sus estudios siguen siendo ejercicio obligado para todo pianista en formación.",
+    estilo: "Clásico-Romántico · Técnica pianística", portrait: "/images/composers/czerny.svg", color: "#6878A0",
+  },
+  "Felix Mendelssohn": {
+    nombre: "Felix Mendelssohn-Bartholdy", vida: "1809 – 1847", nacionalidad: "Alemán",
+    bio: "Niño prodigio y figura central del Romanticismo temprano. Sus Romanzas sin palabras crearon un género que marcó la pequeña forma pianística del siglo XIX.",
+    estilo: "Romántico temprano · Elegancia clásica", portrait: "/images/composers/mendelssohn.svg", color: "#6090A0",
+  },
+  "John Field": {
+    nombre: "John Field", vida: "1782 – 1837", nacionalidad: "Irlandés",
+    bio: "Inventor del nocturno pianístico, forma que Chopin llevaría a su máxima expresión. Field introdujo la textura de melodía cantabile sobre acompañamiento ondulante que definió el género.",
+    estilo: "Romántico temprano · Nocturno", portrait: "/images/composers/field.svg", color: "#6080A0",
+  },
+  "Charles-Valentin Alkan": {
+    nombre: "Charles-Valentin Alkan", vida: "1813 – 1888", nacionalidad: "Francés",
+    bio: "Amigo de Chopin y Liszt, Alkan escribió algunas de las obras más difíciles del repertorio. Su excentricidad lo relegó al olvido hasta su redescubrimiento en el siglo XX.",
+    estilo: "Romántico · Virtuosismo extremo", portrait: "/images/composers/alkan.svg", color: "#B07060",
+  },
+  "Johann F. F. Burgmüller": {
+    nombre: "Johann Friedrich Franz Burgmüller", vida: "1806 – 1874", nacionalidad: "Alemán",
+    bio: "Sus 25 Estudios Op.100 son un tesoro pedagógico: cada estudio aborda una dificultad técnica específica envuelta en una miniatura musical de gran encanto.",
+    estilo: "Romántico · Didáctica progresiva", portrait: "/images/composers/burgmuller.svg", color: "#908060",
+  },
+  "Gabriel Fauré": {
+    nombre: "Gabriel Fauré", vida: "1845 – 1924", nacionalidad: "Francés",
+    bio: "Puente entre el Romanticismo y el siglo XX, Fauré creó un lenguaje armónico propio, sutil y perfumado. Sus trece nocturnos y cuatro valses-caprichos son joyas del piano francés.",
+    estilo: "Romántico tardío · Armonía modal", portrait: "/images/composers/faure.svg", color: "#509090",
+  },
+  "César Franck": {
+    nombre: "César Franck", vida: "1822 – 1890", nacionalidad: "Belga-Francés",
+    bio: "Tardío en reconocerse como compositor, Franck renovó la música francesa con su uso de la forma cíclica. Su Preludio, Coral y Fuga es cumbre del piano romántico.",
+    estilo: "Romántico · Forma cíclica · Cromatismo", portrait: "/images/composers/franck.svg", color: "#607080",
+  },
+  "Camille Saint-Saëns": {
+    nombre: "Camille Saint-Saëns", vida: "1835 – 1921", nacionalidad: "Francés",
+    bio: "Niño prodigio, virtuoso del piano y el órgano, Saint-Saëns fue una figura central de la música francesa durante siete décadas. Sus cinco conciertos para piano son pilares del repertorio.",
+    estilo: "Romántico · Claridad francesa", portrait: "/images/composers/saint_saens.svg", color: "#708080",
+  },
+  "Isaac Albéniz": {
+    nombre: "Isaac Albéniz", vida: "1860 – 1909", nacionalidad: "Español",
+    bio: "Su suite Iberia es la obra pianística española más importante y uno de los grandes ciclos del piano del siglo XX. Albéniz tradujo al piano toda la riqueza sonora de Andalucía.",
+    estilo: "Nacionalismo español · Impresionismo", portrait: "/images/composers/albeniz.svg", color: "#B07840",
+  },
+  "Antonín Dvořák": {
+    nombre: "Antonín Dvořák", vida: "1841 – 1904", nacionalidad: "Checo",
+    bio: "Junto a Smetana, figura máxima del nacionalismo checo. Sus Humoresques para piano contienen la célebre N.º7, una de las melodías más reconocibles del siglo XIX.",
+    estilo: "Nacionalismo checo · Folclore eslavo", portrait: "/images/composers/dvorak.svg", color: "#608070",
+  },
+  "Modest Músorgski": {
+    nombre: "Modest Músorgski", vida: "1839 – 1881", nacionalidad: "Ruso",
+    bio: "Miembro del Grupo de los Cinco, creador del realismo ruso en música. Sus Cuadros de una exposición son una de las obras más imaginativas del repertorio pianístico.",
+    estilo: "Nacionalismo ruso · Realismo musical", portrait: "/images/composers/mussorgsky.svg", color: "#905040",
+  },
+  "Nikolái Rimski-Kórsakov": {
+    nombre: "Nikolái Rimski-Kórsakov", vida: "1844 – 1908", nacionalidad: "Ruso",
+    bio: "Maestro de la orquestación y figura clave del Grupo de los Cinco. Su música para piano, menos conocida, muestra el mismo refinamiento colorístico de sus sinfonías.",
+    estilo: "Nacionalismo ruso · Colorismo orquestal", portrait: "/images/composers/rimsky_korsakov.svg", color: "#7080A0",
+  },
+  "Sergei Rachmaninoff": {
+    nombre: "Sergei Rachmaninoff", vida: "1873 – 1943", nacionalidad: "Ruso",
+    bio: "Último gran pianista-compositor en la tradición romántica. Sus preludios, estudios-cuadros y conciertos para piano combinan melancolía eslava con un virtuosismo trascendental.",
+    estilo: "Romántico tardío · Virtuosismo ruso", portrait: "/images/composers/rachmaninoff.svg", color: "#5060A0",
+  },
+  "Alexander Scriabin": {
+    nombre: "Alexander Scriabin", vida: "1872 – 1915", nacionalidad: "Ruso",
+    bio: "Visionario y místico, Scriabin evolucionó desde Chopin hasta un lenguaje armónico propio basado en el 'acorde místico'. Sus últimas sonatas son cumbres del modernismo.",
+    estilo: "Romántico-Místico · Armonía post-tonal", portrait: "/images/composers/scriabin.svg", color: "#A05090",
+  },
+  "Paul Dukas": {
+    nombre: "Paul Dukas", vida: "1865 – 1935", nacionalidad: "Francés",
+    bio: "Aunque conocido mundialmente por El aprendiz de brujo, Dukas compuso una importante sonata para piano (1901), obra monumental y culminación de la tradición francesa romántica.",
+    estilo: "Post-romántico francés · Orquestación", portrait: "/images/composers/dukas.svg", color: "#708060",
+  },
+  "Niccolò Paganini": {
+    nombre: "Niccolò Paganini", vida: "1782 – 1840", nacionalidad: "Italiano",
+    bio: "El violinista más legendario de la historia. Sus 24 Caprichos inspiraron transcripciones pianísticas de Liszt, Schumann, Brahms y Rachmaninoff.",
+    estilo: "Romántico · Virtuosismo violinístico", portrait: "/images/composers/paganini.svg", color: "#A04030",
+  },
+  "Johann Strauss (hijo)": {
+    nombre: "Johann Strauss (hijo)", vida: "1825 – 1899", nacionalidad: "Austriaco",
+    bio: "El 'Rey del Vals' vienés. Aunque sus obras maestras son orquestales, las transcripciones pianísticas de sus valses son éxito seguro en el salón.",
+    estilo: "Romántico · Vals vienés", portrait: "/images/composers/strauss_jj.svg", color: "#A08060",
+  },
 };
 
 // Descripciones para piezas conocidas por nombre de archivo

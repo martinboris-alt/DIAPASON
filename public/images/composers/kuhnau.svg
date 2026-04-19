@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#180f00" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0a0a0a" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#B08830" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#B08830" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="circle">
+      <circle cx="100" cy="100" r="96"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#0a0a0a"/>
+  <circle cx="100" cy="100" r="96" fill="url(#bg)"/>
+  <circle cx="100" cy="100" r="96" fill="url(#glow)"/>
+
+  <!-- Silhouette -->
+  <g clip-path="url(#circle)" transform="translate(0, 10)">
+    
+    <ellipse cx="100" cy="68" rx="22" ry="26" fill="#B08830" opacity="0.9"/>
+    <path d="M68 110 Q72 90 78 84 Q88 78 100 78 Q112 78 122 84 Q128 90 132 110 Q120 118 100 120 Q80 118 68 110Z" fill="#B08830" opacity="0.85"/>
+    <path d="M60 120 Q65 108 68 110 Q80 118 100 120 Q120 118 132 110 Q135 108 140 120 Q130 145 100 150 Q70 145 60 120Z" fill="#B08830" opacity="0.7"/>
+    <ellipse cx="100" cy="68" rx="18" ry="14" fill="#180f00" opacity="0.3"/>
+    <path d="M78 58 Q82 44 100 42 Q118 44 122 58" fill="none" stroke="#B08830" stroke-width="1.5" opacity="0.6"/>
+  
+  </g>
+
+  <!-- Decorative rings -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#B08830" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="100" cy="100" r="96" fill="none" stroke="#B08830" stroke-width="1" opacity="0.5"/>
+
+  <!-- Corner accents -->
+  <path d="M14 14 L30 14 M14 14 L14 30" stroke="#B08830" stroke-width="1.5" opacity="0.6" fill="none"/>
+  <path d="M186 14 L170 14 M186 14 L186 30" stroke="#B08830" stroke-width="1.5" opacity="0.6" fill="none"/>
+  <path d="M14 186 L30 186 M14 186 L14 170" stroke="#B08830" stroke-width="1.5" opacity="0.6" fill="none"/>
+  <path d="M186 186 L170 186 M186 186 L186 170" stroke="#B08830" stroke-width="1.5" opacity="0.6" fill="none"/>
+
+  <!-- Initials -->
+  <text x="100" y="192" font-family="Georgia, serif" font-size="11" fill="#B08830"
+    opacity="0.7" text-anchor="middle" letter-spacing="4">JK</text>
+</svg>

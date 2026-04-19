@@ -1247,6 +1247,16 @@
     "midiPath": "/midi/O_Haupt_voll_Blut.mid"
   },
   {
+    "titulo": "cpe-bach-rondo",
+    "compositor": "Carl Philipp Emanuel Bach",
+    "periodo": "Barroco",
+    "filename": "cpe-bach-rondo-a4.pdf",
+    "localPath": "/partituras/cpe-bach-rondo-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BachCPE/cpe-bach-rondo/cpe-bach-rondo-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/cpe-bach-rondo.mid"
+  },
+  {
     "titulo": "01-overture",
     "compositor": "Georg Friedrich Händel",
     "periodo": "Barroco",
@@ -1475,6 +1485,116 @@
     "source": "https://www.mutopiaproject.org/ftp/HandelGF/HWV585/sonatina-in-b-flat-major/sonatina-in-b-flat-major-a4.pdf",
     "licencia": "CC / Dominio Público (Mutopia Project)",
     "midiPath": "/midi/sonatina-in-b-flat-major.mid"
+  },
+  {
+    "titulo": "sonatensatz",
+    "compositor": "Domenico Scarlatti",
+    "periodo": "Barroco",
+    "filename": "sonatensatz-a4.pdf",
+    "localPath": "/partituras/sonatensatz-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScarlattiD/K11/sonatensatz/sonatensatz-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/sonatensatz.mid"
+  },
+  {
+    "titulo": "scarlatti-k455",
+    "compositor": "Domenico Scarlatti",
+    "periodo": "Barroco",
+    "filename": "scarlatti-k455-a4.pdf",
+    "localPath": "/partituras/scarlatti-k455-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScarlattiD/K455/scarlatti-k455/scarlatti-k455-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/scarlatti-k455.mid"
+  },
+  {
+    "titulo": "scarlatti-k491",
+    "compositor": "Domenico Scarlatti",
+    "periodo": "Barroco",
+    "filename": "scarlatti-k491-a4.pdf",
+    "localPath": "/partituras/scarlatti-k491-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScarlattiD/K491/scarlatti-k491/scarlatti-k491-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/scarlatti-k491.mid"
+  },
+  {
+    "titulo": "ds_sonate_c",
+    "compositor": "Domenico Scarlatti",
+    "periodo": "Barroco",
+    "filename": "ds_sonate_c-a4.pdf",
+    "localPath": "/partituras/ds_sonate_c-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScarlattiD/ds_sonate_c/ds_sonate_c-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/ds_sonate_c.mid"
+  },
+  {
+    "titulo": "plaintes",
+    "compositor": "Jean-Philippe Rameau",
+    "periodo": "Barroco",
+    "filename": "plaintes-a4.pdf",
+    "localPath": "/partituras/plaintes-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RameauJP/plaintes/plaintes-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/plaintes.mid"
+  },
+  {
+    "titulo": "sauvages",
+    "compositor": "Jean-Philippe Rameau",
+    "periodo": "Barroco",
+    "filename": "sauvages-a4.pdf",
+    "localPath": "/partituras/sauvages-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RameauJP/sauvages/sauvages-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/sauvages.mid"
+  },
+  {
+    "titulo": "tambourin",
+    "compositor": "Jean-Philippe Rameau",
+    "periodo": "Barroco",
+    "filename": "tambourin-a4.pdf",
+    "localPath": "/partituras/tambourin-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RameauJP/tambourin/tambourin-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/tambourin.mid"
+  },
+  {
+    "titulo": "WhatPowerArtThou",
+    "compositor": "Henry Purcell",
+    "periodo": "Barroco",
+    "filename": "WhatPowerArtThou-a4.pdf",
+    "localPath": "/partituras/WhatPowerArtThou-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/PurcellH/Z628/WhatPowerArtThou/WhatPowerArtThou-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/WhatPowerArtThou.mid"
+  },
+  {
+    "titulo": "fugue-3-7",
+    "compositor": "Johann Pachelbel",
+    "periodo": "Barroco",
+    "filename": "fugue-3-7-a4.pdf",
+    "localPath": "/partituras/fugue-3-7-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/PachelbelJ/fugue-3-7/fugue-3-7-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/fugue-3-7.mid"
+  },
+  {
+    "titulo": "Fischer_EratoAllemande",
+    "compositor": "Johann K. F. Fischer",
+    "periodo": "Barroco",
+    "filename": "Fischer_EratoAllemande-a4.pdf",
+    "localPath": "/partituras/Fischer_EratoAllemande-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/FischerJKF/Fischer_EratoAllemande/Fischer_EratoAllemande-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Fischer_EratoAllemande.mid"
+  },
+  {
+    "titulo": "Fischer_EratoPraeludium",
+    "compositor": "Johann K. F. Fischer",
+    "periodo": "Barroco",
+    "filename": "Fischer_EratoPraeludium-a4.pdf",
+    "localPath": "/partituras/Fischer_EratoPraeludium-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/FischerJKF/Fischer_EratoPraeludium/Fischer_EratoPraeludium-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Fischer_EratoPraeludium.mid"
   },
   {
     "titulo": "hob-xvi-27-i-allegro-con-brio",
@@ -2264,6 +2384,784 @@
     "source": "https://www.mutopiaproject.org/ftp/BeethovenLv/WoO82/menuett_WoO82/menuett_WoO82-a4.pdf",
     "licencia": "CC / Dominio Público (Mutopia Project)",
     "midiPath": "/midi/menuett_WoO82.mid"
+  },
+  {
+    "titulo": "sonatina-1",
+    "compositor": "Muzio Clementi",
+    "periodo": "Clásico",
+    "filename": "sonatina-1-a4.pdf",
+    "localPath": "/partituras/sonatina-1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ClementiM/O36/sonatina-1/sonatina-1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "clementi-op42",
+    "compositor": "Muzio Clementi",
+    "periodo": "Clásico",
+    "filename": "clementi-op42-a4.pdf",
+    "localPath": "/partituras/clementi-op42-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ClementiM/O42/clementi-op42/clementi-op42-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "sonatine-1-allegro",
+    "compositor": "Friedrich Kuhlau",
+    "periodo": "Clásico",
+    "filename": "sonatine-1-allegro-a4.pdf",
+    "localPath": "/partituras/sonatine-1-allegro-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/KuhlauF/O20/sonatine-1-allegro/sonatine-1-allegro-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/sonatine-1-allegro.mid"
+  },
+  {
+    "titulo": "sonatine-1-andante",
+    "compositor": "Friedrich Kuhlau",
+    "periodo": "Clásico",
+    "filename": "sonatine-1-andante-a4.pdf",
+    "localPath": "/partituras/sonatine-1-andante-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/KuhlauF/O20/sonatine-1-andante/sonatine-1-andante-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/sonatine-1-andante.mid"
+  },
+  {
+    "titulo": "sonatine-1-rondo",
+    "compositor": "Friedrich Kuhlau",
+    "periodo": "Clásico",
+    "filename": "sonatine-1-rondo-a4.pdf",
+    "localPath": "/partituras/sonatine-1-rondo-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/KuhlauF/O20/sonatine-1-rondo/sonatine-1-rondo-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/sonatine-1-rondo.mid"
+  },
+  {
+    "titulo": "Dussek_Op46_1",
+    "compositor": "Jan L. Dussek",
+    "periodo": "Clásico",
+    "filename": "Dussek_Op46_1-a4.pdf",
+    "localPath": "/partituras/Dussek_Op46_1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DussekJL/O46/Dussek_Op46_1/Dussek_Op46_1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "Dussek_Op46_2",
+    "compositor": "Jan L. Dussek",
+    "periodo": "Clásico",
+    "filename": "Dussek_Op46_2-a4.pdf",
+    "localPath": "/partituras/Dussek_Op46_2-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DussekJL/O46/Dussek_Op46_2/Dussek_Op46_2-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "Dussek_Op46_3",
+    "compositor": "Jan L. Dussek",
+    "periodo": "Clásico",
+    "filename": "Dussek_Op46_3-a4.pdf",
+    "localPath": "/partituras/Dussek_Op46_3-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DussekJL/O46/Dussek_Op46_3/Dussek_Op46_3-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "Dussek_Op46_4",
+    "compositor": "Jan L. Dussek",
+    "periodo": "Clásico",
+    "filename": "Dussek_Op46_4-a4.pdf",
+    "localPath": "/partituras/Dussek_Op46_4-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DussekJL/O46/Dussek_Op46_4/Dussek_Op46_4-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "Dussek_Op46_5",
+    "compositor": "Jan L. Dussek",
+    "periodo": "Clásico",
+    "filename": "Dussek_Op46_5-a4.pdf",
+    "localPath": "/partituras/Dussek_Op46_5-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DussekJL/O46/Dussek_Op46_5/Dussek_Op46_5-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "Dussek_Op46_6",
+    "compositor": "Jan L. Dussek",
+    "periodo": "Clásico",
+    "filename": "Dussek_Op46_6-a4.pdf",
+    "localPath": "/partituras/Dussek_Op46_6-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DussekJL/O46/Dussek_Op46_6/Dussek_Op46_6-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "diabeli.op149.1",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "diabeli.op149.1-a4.pdf",
+    "localPath": "/partituras/diabeli.op149.1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/diabeli.op149.1/diabeli.op149.1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/diabeli.op149.1.mid"
+  },
+  {
+    "titulo": "diabeli.op149.2",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "diabeli.op149.2-a4.pdf",
+    "localPath": "/partituras/diabeli.op149.2-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/diabeli.op149.2/diabeli.op149.2-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/diabeli.op149.2.mid"
+  },
+  {
+    "titulo": "op149-3",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-3-a4.pdf",
+    "localPath": "/partituras/op149-3-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-3/op149-3-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-3.mid"
+  },
+  {
+    "titulo": "op149-4",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-4-a4.pdf",
+    "localPath": "/partituras/op149-4-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-4/op149-4-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-4.mid"
+  },
+  {
+    "titulo": "op149-5",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-5-a4.pdf",
+    "localPath": "/partituras/op149-5-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-5/op149-5-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-5.mid"
+  },
+  {
+    "titulo": "op149-6",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-6-a4.pdf",
+    "localPath": "/partituras/op149-6-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-6/op149-6-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "op149-7",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-7-a4.pdf",
+    "localPath": "/partituras/op149-7-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-7/op149-7-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "op149-8",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-8-a4.pdf",
+    "localPath": "/partituras/op149-8-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-8/op149-8-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-8.mid"
+  },
+  {
+    "titulo": "op149-9",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-9-a4.pdf",
+    "localPath": "/partituras/op149-9-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-9/op149-9-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-9.mid"
+  },
+  {
+    "titulo": "op149-10",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-10-a4.pdf",
+    "localPath": "/partituras/op149-10-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-10/op149-10-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-10.mid"
+  },
+  {
+    "titulo": "op149-11",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-11-a4.pdf",
+    "localPath": "/partituras/op149-11-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-11/op149-11-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-11.mid"
+  },
+  {
+    "titulo": "op149-12",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-12-a4.pdf",
+    "localPath": "/partituras/op149-12-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-12/op149-12-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-12.mid"
+  },
+  {
+    "titulo": "op149-13",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-13-a4.pdf",
+    "localPath": "/partituras/op149-13-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-13/op149-13-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-13.mid"
+  },
+  {
+    "titulo": "op149-14",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-14-a4.pdf",
+    "localPath": "/partituras/op149-14-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-14/op149-14-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "op149-15",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-15-a4.pdf",
+    "localPath": "/partituras/op149-15-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-15/op149-15-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-15.mid"
+  },
+  {
+    "titulo": "op149-16",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-16-a4.pdf",
+    "localPath": "/partituras/op149-16-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-16/op149-16-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "op149-17",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-17-a4.pdf",
+    "localPath": "/partituras/op149-17-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-17/op149-17-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-17.mid"
+  },
+  {
+    "titulo": "op149-18",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-18-a4.pdf",
+    "localPath": "/partituras/op149-18-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-18/op149-18-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-18.mid"
+  },
+  {
+    "titulo": "op149-19",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-19-a4.pdf",
+    "localPath": "/partituras/op149-19-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-19/op149-19-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-19.mid"
+  },
+  {
+    "titulo": "op149-20",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-20-a4.pdf",
+    "localPath": "/partituras/op149-20-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-20/op149-20-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-20.mid"
+  },
+  {
+    "titulo": "op149-21",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-21-a4.pdf",
+    "localPath": "/partituras/op149-21-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-21/op149-21-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-21.mid"
+  },
+  {
+    "titulo": "op149-22",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-22-a4.pdf",
+    "localPath": "/partituras/op149-22-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-22/op149-22-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-22.mid"
+  },
+  {
+    "titulo": "op149-23",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-23-a4.pdf",
+    "localPath": "/partituras/op149-23-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-23/op149-23-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-23.mid"
+  },
+  {
+    "titulo": "op149-24",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-24-a4.pdf",
+    "localPath": "/partituras/op149-24-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-24/op149-24-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-24.mid"
+  },
+  {
+    "titulo": "op149-25",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-25-a4.pdf",
+    "localPath": "/partituras/op149-25-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-25/op149-25-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-25.mid"
+  },
+  {
+    "titulo": "op149-26",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-26-a4.pdf",
+    "localPath": "/partituras/op149-26-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-26/op149-26-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-26.mid"
+  },
+  {
+    "titulo": "op149-27",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-27-a4.pdf",
+    "localPath": "/partituras/op149-27-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-27/op149-27-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-27.mid"
+  },
+  {
+    "titulo": "op149-28",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "op149-28-a4.pdf",
+    "localPath": "/partituras/op149-28-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O149/op149-28/op149-28-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op149-28.mid"
+  },
+  {
+    "titulo": "diabeli.op163.s1-1",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "diabeli.op163.s1-1-a4.pdf",
+    "localPath": "/partituras/diabeli.op163.s1-1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O163/diabeli.op163.s1-1/diabeli.op163.s1-1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/diabeli.op163.s1-1.mid"
+  },
+  {
+    "titulo": "diabeli.op163.s1-2",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "diabeli.op163.s1-2-a4.pdf",
+    "localPath": "/partituras/diabeli.op163.s1-2-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O163/diabeli.op163.s1-2/diabeli.op163.s1-2-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/diabeli.op163.s1-2.mid"
+  },
+  {
+    "titulo": "diabeli.op163.s1-3",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "diabeli.op163.s1-3-a4.pdf",
+    "localPath": "/partituras/diabeli.op163.s1-3-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O163/diabeli.op163.s1-3/diabeli.op163.s1-3-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/diabeli.op163.s1-3.mid"
+  },
+  {
+    "titulo": "diabeli.op163.s1-4",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "diabeli.op163.s1-4-a4.pdf",
+    "localPath": "/partituras/diabeli.op163.s1-4-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O163/diabeli.op163.s1-4/diabeli.op163.s1-4-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/diabeli.op163.s1-4.mid"
+  },
+  {
+    "titulo": "diabeli.op163.s2-1",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "diabeli.op163.s2-1-a4.pdf",
+    "localPath": "/partituras/diabeli.op163.s2-1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O163/diabeli.op163.s2-1/diabeli.op163.s2-1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/diabeli.op163.s2-1.mid"
+  },
+  {
+    "titulo": "diabeli.op163.s2-2",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "diabeli.op163.s2-2-a4.pdf",
+    "localPath": "/partituras/diabeli.op163.s2-2-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O163/diabeli.op163.s2-2/diabeli.op163.s2-2-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/diabeli.op163.s2-2.mid"
+  },
+  {
+    "titulo": "diabeli.op163.s2-3",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "diabeli.op163.s2-3-a4.pdf",
+    "localPath": "/partituras/diabeli.op163.s2-3-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O163/diabeli.op163.s2-3/diabeli.op163.s2-3-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/diabeli.op163.s2-3.mid"
+  },
+  {
+    "titulo": "diabeli.op163.s2-4",
+    "compositor": "Anton Diabelli",
+    "periodo": "Clásico",
+    "filename": "diabeli.op163.s2-4-a4.pdf",
+    "localPath": "/partituras/diabeli.op163.s2-4-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DiabelliA/O163/diabeli.op163.s2-4/diabeli.op163.s2-4-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/diabeli.op163.s2-4.mid"
+  },
+  {
+    "titulo": "op840-1",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "op840-1-a4.pdf",
+    "localPath": "/partituras/op840-1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-1/op840-1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op840-1.mid"
+  },
+  {
+    "titulo": "op840-2",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "op840-2-a4.pdf",
+    "localPath": "/partituras/op840-2-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-2/op840-2-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op840-2.mid"
+  },
+  {
+    "titulo": "op840-3",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "op840-3-a4.pdf",
+    "localPath": "/partituras/op840-3-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-3/op840-3-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op840-3.mid"
+  },
+  {
+    "titulo": "op840-4",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "op840-4-a4.pdf",
+    "localPath": "/partituras/op840-4-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-4/op840-4-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op840-4.mid"
+  },
+  {
+    "titulo": "op840-5",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "op840-5-a4.pdf",
+    "localPath": "/partituras/op840-5-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-5/op840-5-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op840-5.mid"
+  },
+  {
+    "titulo": "op840-6",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "op840-6-a4.pdf",
+    "localPath": "/partituras/op840-6-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-6/op840-6-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op840-6.mid"
+  },
+  {
+    "titulo": "op840-7",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "op840-7-a4.pdf",
+    "localPath": "/partituras/op840-7-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-7/op840-7-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op840-7.mid"
+  },
+  {
+    "titulo": "op840-8",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "op840-8-a4.pdf",
+    "localPath": "/partituras/op840-8-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-8/op840-8-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op840-8.mid"
+  },
+  {
+    "titulo": "op840-9",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "op840-9-a4.pdf",
+    "localPath": "/partituras/op840-9-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-9/op840-9-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op840-9.mid"
+  },
+  {
+    "titulo": "op840-10",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "op840-10-a4.pdf",
+    "localPath": "/partituras/op840-10-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/O840/op840-10/op840-10-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/op840-10.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_001",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_001-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_001-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_001/Czerny_Op_821_No_001-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_001.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_002",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_002-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_002-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_002/Czerny_Op_821_No_002-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_002.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_003",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_003-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_003-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_003/Czerny_Op_821_No_003-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_003.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_004",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_004-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_004-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_004/Czerny_Op_821_No_004-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_004.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_005",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_005-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_005-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_005/Czerny_Op_821_No_005-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_005.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_006",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_006-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_006-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_006/Czerny_Op_821_No_006-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_006.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_007",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_007-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_007-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_007/Czerny_Op_821_No_007-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_007.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_008",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_008-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_008-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_008/Czerny_Op_821_No_008-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_008.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_009",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_009-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_009-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_009/Czerny_Op_821_No_009-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_009.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_010",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_010-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_010-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_010/Czerny_Op_821_No_010-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_010.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_011",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_011-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_011-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_011/Czerny_Op_821_No_011-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_011.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_012",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_012-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_012-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_012/Czerny_Op_821_No_012-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_012.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_013",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_013-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_013-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_013/Czerny_Op_821_No_013-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_013.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_014",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_014-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_014-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_014/Czerny_Op_821_No_014-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_014.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_015",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_015-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_015-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_015/Czerny_Op_821_No_015-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_015.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_016",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_016-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_016-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_016/Czerny_Op_821_No_016-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_016.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_017",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_017-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_017-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_017/Czerny_Op_821_No_017-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_017.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_018",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_018-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_018-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_018/Czerny_Op_821_No_018-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_018.mid"
+  },
+  {
+    "titulo": "Czerny_Op_821_No_019",
+    "compositor": "Carl Czerny",
+    "periodo": "Clásico",
+    "filename": "Czerny_Op_821_No_019-a4.pdf",
+    "localPath": "/partituras/Czerny_Op_821_No_019-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/CzernyC/Op_821/Czerny_Op_821_No_019/Czerny_Op_821_No_019-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Czerny_Op_821_No_019.mid"
+  },
+  {
+    "titulo": "pleyel-menuett",
+    "compositor": "Ignaz J. Pleyel",
+    "periodo": "Clásico",
+    "filename": "pleyel-menuett-a4.pdf",
+    "localPath": "/partituras/pleyel-menuett-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/PleyelIJ/pleyel-menuett/pleyel-menuett-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/pleyel-menuett.mid"
+  },
+  {
+    "titulo": "ries-wiegenlied",
+    "compositor": "Ferdinand Ries",
+    "periodo": "Clásico",
+    "filename": "ries-wiegenlied-a4.pdf",
+    "localPath": "/partituras/ries-wiegenlied-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RiesF/ries-wiegenlied/ries-wiegenlied-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/ries-wiegenlied.mid"
+  },
+  {
+    "titulo": "muller-siciliano",
+    "compositor": "August E. Müller",
+    "periodo": "Clásico",
+    "filename": "muller-siciliano-a4.pdf",
+    "localPath": "/partituras/muller-siciliano-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/MuellerAE/muller-siciliano/muller-siciliano-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/muller-siciliano.mid"
   },
   {
     "titulo": "gretchen",
@@ -3756,6 +4654,884 @@
     "midiPath": "/midi/dansenapolitaine.mid"
   },
   {
+    "titulo": "mendelssohn-scherzo-eminor",
+    "compositor": "Felix Mendelssohn",
+    "periodo": "Romántico",
+    "filename": "mendelssohn-scherzo-eminor-a4.pdf",
+    "localPath": "/partituras/mendelssohn-scherzo-eminor-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O16/mendelssohn-scherzo-eminor/mendelssohn-scherzo-eminor-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/mendelssohn-scherzo-eminor.mid"
+  },
+  {
+    "titulo": "5.Inquietude",
+    "compositor": "Felix Mendelssohn",
+    "periodo": "Romántico",
+    "filename": "5.Inquietude-a4.pdf",
+    "localPath": "/partituras/5.Inquietude-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O19/5.Inquietude/5.Inquietude-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/5.Inquietude.mid"
+  },
+  {
+    "titulo": "Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6",
+    "compositor": "Felix Mendelssohn",
+    "periodo": "Romántico",
+    "filename": "Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6-a4.pdf",
+    "localPath": "/partituras/Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O19/Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6/Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Lieder-ohne-Worte-Venetianisches-Gondellied-Op19-No6.mid"
+  },
+  {
+    "titulo": "LiederOhneWorte_-_Op30_No6",
+    "compositor": "Felix Mendelssohn",
+    "periodo": "Romántico",
+    "filename": "LiederOhneWorte_-_Op30_No6-a4.pdf",
+    "localPath": "/partituras/LiederOhneWorte_-_Op30_No6-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O30/LiederOhneWorte_-_Op30_No6/LiederOhneWorte_-_Op30_No6-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/LiederOhneWorte_-_Op30_No6.mid"
+  },
+  {
+    "titulo": "SongWW_opus53no5",
+    "compositor": "Felix Mendelssohn",
+    "periodo": "Romántico",
+    "filename": "SongWW_opus53no5-a4.pdf",
+    "localPath": "/partituras/SongWW_opus53no5-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O53/SongWW_opus53no5/SongWW_opus53no5-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/SongWW_opus53no5.mid"
+  },
+  {
+    "titulo": "LiederOhneWorte_-_Op85_No1",
+    "compositor": "Felix Mendelssohn",
+    "periodo": "Romántico",
+    "filename": "LiederOhneWorte_-_Op85_No1-a4.pdf",
+    "localPath": "/partituras/LiederOhneWorte_-_Op85_No1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O85/LiederOhneWorte_-_Op85_No1/LiederOhneWorte_-_Op85_No1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/LiederOhneWorte_-_Op85_No1.mid"
+  },
+  {
+    "titulo": "SongWW_opus102no3",
+    "compositor": "Felix Mendelssohn",
+    "periodo": "Romántico",
+    "filename": "SongWW_opus102no3-a4.pdf",
+    "localPath": "/partituras/SongWW_opus102no3-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Mendelssohn-BartholdyF/O102/SongWW_opus102no3/SongWW_opus102no3-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/SongWW_opus102no3.mid"
+  },
+  {
+    "titulo": "Field_Nocturne_5",
+    "compositor": "John Field",
+    "periodo": "Romántico",
+    "filename": "Field_Nocturne_5-a4.pdf",
+    "localPath": "/partituras/Field_Nocturne_5-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/FieldJ/H37/Field_Nocturne_5/Field_Nocturne_5-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Field_Nocturne_5.mid"
+  },
+  {
+    "titulo": "alkan-op31-1",
+    "compositor": "Charles-Valentin Alkan",
+    "periodo": "Romántico",
+    "filename": "alkan-op31-1-a4.pdf",
+    "localPath": "/partituras/alkan-op31-1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/AlkanCV/O31/alkan-op31-1/alkan-op31-1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/alkan-op31-1.mid"
+  },
+  {
+    "titulo": "alkan-op31-2",
+    "compositor": "Charles-Valentin Alkan",
+    "periodo": "Romántico",
+    "filename": "alkan-op31-2-a4.pdf",
+    "localPath": "/partituras/alkan-op31-2-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/AlkanCV/O31/alkan-op31-2/alkan-op31-2-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/alkan-op31-2.mid"
+  },
+  {
+    "titulo": "toccatina",
+    "compositor": "Charles-Valentin Alkan",
+    "periodo": "Romántico",
+    "filename": "toccatina-a4.pdf",
+    "localPath": "/partituras/toccatina-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/AlkanCV/O75/toccatina/toccatina-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/toccatina.mid"
+  },
+  {
+    "titulo": "25EF-01",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-01-a4.pdf",
+    "localPath": "/partituras/25EF-01-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-01/25EF-01-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-01.mid"
+  },
+  {
+    "titulo": "25EF-02",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-02-a4.pdf",
+    "localPath": "/partituras/25EF-02-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-02/25EF-02-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-02.mid"
+  },
+  {
+    "titulo": "25EF-03",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-03-a4.pdf",
+    "localPath": "/partituras/25EF-03-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-03/25EF-03-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-03.mid"
+  },
+  {
+    "titulo": "25EF-04",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-04-a4.pdf",
+    "localPath": "/partituras/25EF-04-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-04/25EF-04-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-04.mid"
+  },
+  {
+    "titulo": "25EF-05",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-05-a4.pdf",
+    "localPath": "/partituras/25EF-05-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-05/25EF-05-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-05.mid"
+  },
+  {
+    "titulo": "25EF-06",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-06-a4.pdf",
+    "localPath": "/partituras/25EF-06-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-06/25EF-06-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-06.mid"
+  },
+  {
+    "titulo": "25EF-07",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-07-a4.pdf",
+    "localPath": "/partituras/25EF-07-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-07/25EF-07-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-07.mid"
+  },
+  {
+    "titulo": "25EF-08",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-08-a4.pdf",
+    "localPath": "/partituras/25EF-08-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-08/25EF-08-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-08.mid"
+  },
+  {
+    "titulo": "25EF-09",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-09-a4.pdf",
+    "localPath": "/partituras/25EF-09-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-09/25EF-09-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-09.mid"
+  },
+  {
+    "titulo": "25EF-10",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-10-a4.pdf",
+    "localPath": "/partituras/25EF-10-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-10/25EF-10-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-10.mid"
+  },
+  {
+    "titulo": "25EF-11",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-11-a4.pdf",
+    "localPath": "/partituras/25EF-11-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-11/25EF-11-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-11.mid"
+  },
+  {
+    "titulo": "25EF-12",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-12-a4.pdf",
+    "localPath": "/partituras/25EF-12-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-12/25EF-12-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-12.mid"
+  },
+  {
+    "titulo": "25EF-13",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-13-a4.pdf",
+    "localPath": "/partituras/25EF-13-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-13/25EF-13-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-13.mid"
+  },
+  {
+    "titulo": "25EF-14",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-14-a4.pdf",
+    "localPath": "/partituras/25EF-14-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-14/25EF-14-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-14.mid"
+  },
+  {
+    "titulo": "25EF-15",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-15-a4.pdf",
+    "localPath": "/partituras/25EF-15-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-15/25EF-15-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-15.mid"
+  },
+  {
+    "titulo": "25EF-16",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-16-a4.pdf",
+    "localPath": "/partituras/25EF-16-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-16/25EF-16-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-16.mid"
+  },
+  {
+    "titulo": "25EF-17",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-17-a4.pdf",
+    "localPath": "/partituras/25EF-17-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-17/25EF-17-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-17.mid"
+  },
+  {
+    "titulo": "25EF-18",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "25EF-18-a4.pdf",
+    "localPath": "/partituras/25EF-18-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/O100/25EF-18/25EF-18-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/25EF-18.mid"
+  },
+  {
+    "titulo": "ploermel",
+    "compositor": "Johann F. F. Burgmüller",
+    "periodo": "Romántico",
+    "filename": "ploermel-a4.pdf",
+    "localPath": "/partituras/ploermel-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BurgmullerJFF/ploermel/ploermel-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/ploermel.mid"
+  },
+  {
+    "titulo": "matelots",
+    "compositor": "Gabriel Fauré",
+    "periodo": "Romántico",
+    "filename": "matelots-a4.pdf",
+    "localPath": "/partituras/matelots-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/FaureG/O2/matelots/matelots-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/matelots.mid"
+  },
+  {
+    "titulo": "apres",
+    "compositor": "Gabriel Fauré",
+    "periodo": "Romántico",
+    "filename": "apres-a4.pdf",
+    "localPath": "/partituras/apres-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/FaureG/O7/apres/apres-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/apres.mid"
+  },
+  {
+    "titulo": "djinns",
+    "compositor": "Gabriel Fauré",
+    "periodo": "Romántico",
+    "filename": "djinns-a4.pdf",
+    "localPath": "/partituras/djinns-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/FaureG/O12/djinns/djinns-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/djinns.mid"
+  },
+  {
+    "titulo": "aurore",
+    "compositor": "Gabriel Fauré",
+    "periodo": "Romántico",
+    "filename": "aurore-a4.pdf",
+    "localPath": "/partituras/aurore-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/FaureG/O39/aurore/aurore-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "fleur_jetee",
+    "compositor": "Gabriel Fauré",
+    "periodo": "Romántico",
+    "filename": "fleur_jetee-a4.pdf",
+    "localPath": "/partituras/fleur_jetee-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/FaureG/O39/fleur_jetee/fleur_jetee-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)"
+  },
+  {
+    "titulo": "le_pays_des_reves",
+    "compositor": "Gabriel Fauré",
+    "periodo": "Romántico",
+    "filename": "le_pays_des_reves-a4.pdf",
+    "localPath": "/partituras/le_pays_des_reves-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/FaureG/O39/le_pays_des_reves/le_pays_des_reves-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/le_pays_des_reves.mid"
+  },
+  {
+    "titulo": "les_roses_d_ispahan",
+    "compositor": "Gabriel Fauré",
+    "periodo": "Romántico",
+    "filename": "les_roses_d_ispahan-a4.pdf",
+    "localPath": "/partituras/les_roses_d_ispahan-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/FaureG/O39/les_roses_d_ispahan/les_roses_d_ispahan-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/les_roses_d_ispahan.mid"
+  },
+  {
+    "titulo": "Rumores_de_la-caleta",
+    "compositor": "Isaac Albéniz",
+    "periodo": "Romántico",
+    "filename": "Rumores_de_la-caleta-a4.pdf",
+    "localPath": "/partituras/Rumores_de_la-caleta-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/AlbenizIMF/O71/Rumores_de_la-caleta/Rumores_de_la-caleta-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Rumores_de_la-caleta.mid"
+  },
+  {
+    "titulo": "dvorak-als-die-alte-mutter",
+    "compositor": "Antonín Dvořák",
+    "periodo": "Romántico",
+    "filename": "dvorak-als-die-alte-mutter-a4.pdf",
+    "localPath": "/partituras/dvorak-als-die-alte-mutter-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/DvorakA/O55/dvorak-als-die-alte-mutter/dvorak-als-die-alte-mutter-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/dvorak-als-die-alte-mutter.mid"
+  },
+  {
+    "titulo": "nobm",
+    "compositor": "Modest Músorgski",
+    "periodo": "Romántico",
+    "filename": "nobm-a4.pdf",
+    "localPath": "/partituras/nobm-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/MussorgskyM/nobm/nobm-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/nobm.mid"
+  },
+  {
+    "titulo": "rimsky-korsakov-op11-1",
+    "compositor": "Nikolái Rimski-Kórsakov",
+    "periodo": "Romántico",
+    "filename": "rimsky-korsakov-op11-1-a4.pdf",
+    "localPath": "/partituras/rimsky-korsakov-op11-1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Rimsky-KorsakovN/O11/rimsky-korsakov-op11-1/rimsky-korsakov-op11-1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rimsky-korsakov-op11-1.mid"
+  },
+  {
+    "titulo": "rimsky-korsakov-op11-2",
+    "compositor": "Nikolái Rimski-Kórsakov",
+    "periodo": "Romántico",
+    "filename": "rimsky-korsakov-op11-2-a4.pdf",
+    "localPath": "/partituras/rimsky-korsakov-op11-2-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Rimsky-KorsakovN/O11/rimsky-korsakov-op11-2/rimsky-korsakov-op11-2-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rimsky-korsakov-op11-2.mid"
+  },
+  {
+    "titulo": "rimsky-korsakov-op11-3",
+    "compositor": "Nikolái Rimski-Kórsakov",
+    "periodo": "Romántico",
+    "filename": "rimsky-korsakov-op11-3-a4.pdf",
+    "localPath": "/partituras/rimsky-korsakov-op11-3-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Rimsky-KorsakovN/O11/rimsky-korsakov-op11-3/rimsky-korsakov-op11-3-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rimsky-korsakov-op11-3.mid"
+  },
+  {
+    "titulo": "rimsky-korsakov-op11-4",
+    "compositor": "Nikolái Rimski-Kórsakov",
+    "periodo": "Romántico",
+    "filename": "rimsky-korsakov-op11-4-a4.pdf",
+    "localPath": "/partituras/rimsky-korsakov-op11-4-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Rimsky-KorsakovN/O11/rimsky-korsakov-op11-4/rimsky-korsakov-op11-4-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rimsky-korsakov-op11-4.mid"
+  },
+  {
+    "titulo": "Rimsky",
+    "compositor": "Nikolái Rimski-Kórsakov",
+    "periodo": "Romántico",
+    "filename": "Rimsky-a4.pdf",
+    "localPath": "/partituras/Rimsky-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/Rimsky-KorsakovN/Rimsky/Rimsky-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Rimsky.mid"
+  },
+  {
+    "titulo": "rach-prelude-op3-no2",
+    "compositor": "Sergei Rachmaninoff",
+    "periodo": "Romántico",
+    "filename": "rach-prelude-op3-no2-a4.pdf",
+    "localPath": "/partituras/rach-prelude-op3-no2-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RachmaninoffS/O3/rach-prelude-op3-no2/rach-prelude-op3-no2-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rach-prelude-op3-no2.mid"
+  },
+  {
+    "titulo": "rach-prelude23-01",
+    "compositor": "Sergei Rachmaninoff",
+    "periodo": "Romántico",
+    "filename": "rach-prelude23-01-a4.pdf",
+    "localPath": "/partituras/rach-prelude23-01-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RachmaninoffS/O23/rach-prelude23-01/rach-prelude23-01-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rach-prelude23-01.mid"
+  },
+  {
+    "titulo": "rach-prelude23-02",
+    "compositor": "Sergei Rachmaninoff",
+    "periodo": "Romántico",
+    "filename": "rach-prelude23-02-a4.pdf",
+    "localPath": "/partituras/rach-prelude23-02-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RachmaninoffS/O23/rach-prelude23-02/rach-prelude23-02-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rach-prelude23-02.mid"
+  },
+  {
+    "titulo": "rach-prelude23-03",
+    "compositor": "Sergei Rachmaninoff",
+    "periodo": "Romántico",
+    "filename": "rach-prelude23-03-a4.pdf",
+    "localPath": "/partituras/rach-prelude23-03-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RachmaninoffS/O23/rach-prelude23-03/rach-prelude23-03-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rach-prelude23-03.mid"
+  },
+  {
+    "titulo": "rach-prelude23-04",
+    "compositor": "Sergei Rachmaninoff",
+    "periodo": "Romántico",
+    "filename": "rach-prelude23-04-a4.pdf",
+    "localPath": "/partituras/rach-prelude23-04-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RachmaninoffS/O23/rach-prelude23-04/rach-prelude23-04-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rach-prelude23-04.mid"
+  },
+  {
+    "titulo": "rach-prelude23-05",
+    "compositor": "Sergei Rachmaninoff",
+    "periodo": "Romántico",
+    "filename": "rach-prelude23-05-a4.pdf",
+    "localPath": "/partituras/rach-prelude23-05-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RachmaninoffS/O23/rach-prelude23-05/rach-prelude23-05-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rach-prelude23-05.mid"
+  },
+  {
+    "titulo": "rach-prelude23-06",
+    "compositor": "Sergei Rachmaninoff",
+    "periodo": "Romántico",
+    "filename": "rach-prelude23-06-a4.pdf",
+    "localPath": "/partituras/rach-prelude23-06-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RachmaninoffS/O23/rach-prelude23-06/rach-prelude23-06-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rach-prelude23-06.mid"
+  },
+  {
+    "titulo": "rach-prelude23-08",
+    "compositor": "Sergei Rachmaninoff",
+    "periodo": "Romántico",
+    "filename": "rach-prelude23-08-a4.pdf",
+    "localPath": "/partituras/rach-prelude23-08-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RachmaninoffS/O23/rach-prelude23-08/rach-prelude23-08-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rach-prelude23-08.mid"
+  },
+  {
+    "titulo": "rach-prelude23-09",
+    "compositor": "Sergei Rachmaninoff",
+    "periodo": "Romántico",
+    "filename": "rach-prelude23-09-a4.pdf",
+    "localPath": "/partituras/rach-prelude23-09-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RachmaninoffS/O23/rach-prelude23-09/rach-prelude23-09-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rach-prelude23-09.mid"
+  },
+  {
+    "titulo": "rach-prelude23-10",
+    "compositor": "Sergei Rachmaninoff",
+    "periodo": "Romántico",
+    "filename": "rach-prelude23-10-a4.pdf",
+    "localPath": "/partituras/rach-prelude23-10-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/RachmaninoffS/O23/rach-prelude23-10/rach-prelude23-10-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/rach-prelude23-10.mid"
+  },
+  {
+    "titulo": "scriabin_etude_2_1",
+    "compositor": "Alexander Scriabin",
+    "periodo": "Romántico",
+    "filename": "scriabin_etude_2_1-a4.pdf",
+    "localPath": "/partituras/scriabin_etude_2_1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScriabinA/O2/scriabin_etude_2_1/scriabin_etude_2_1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/scriabin_etude_2_1.mid"
+  },
+  {
+    "titulo": "Scriabin_prelude_op11no1",
+    "compositor": "Alexander Scriabin",
+    "periodo": "Romántico",
+    "filename": "Scriabin_prelude_op11no1-a4.pdf",
+    "localPath": "/partituras/Scriabin_prelude_op11no1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScriabinA/O11/Scriabin_prelude_op11no1/Scriabin_prelude_op11no1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Scriabin_prelude_op11no1.mid"
+  },
+  {
+    "titulo": "scriabine-op16-no1",
+    "compositor": "Alexander Scriabin",
+    "periodo": "Romántico",
+    "filename": "scriabine-op16-no1-a4.pdf",
+    "localPath": "/partituras/scriabine-op16-no1-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScriabinA/O16/scriabine-op16-no1/scriabine-op16-no1-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/scriabine-op16-no1.mid"
+  },
+  {
+    "titulo": "scriabine-op16-no2",
+    "compositor": "Alexander Scriabin",
+    "periodo": "Romántico",
+    "filename": "scriabine-op16-no2-a4.pdf",
+    "localPath": "/partituras/scriabine-op16-no2-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScriabinA/O16/scriabine-op16-no2/scriabine-op16-no2-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/scriabine-op16-no2.mid"
+  },
+  {
+    "titulo": "scriabine-op16-no3",
+    "compositor": "Alexander Scriabin",
+    "periodo": "Romántico",
+    "filename": "scriabine-op16-no3-a4.pdf",
+    "localPath": "/partituras/scriabine-op16-no3-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScriabinA/O16/scriabine-op16-no3/scriabine-op16-no3-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/scriabine-op16-no3.mid"
+  },
+  {
+    "titulo": "scriabine-op16-no4",
+    "compositor": "Alexander Scriabin",
+    "periodo": "Romántico",
+    "filename": "scriabine-op16-no4-a4.pdf",
+    "localPath": "/partituras/scriabine-op16-no4-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScriabinA/O16/scriabine-op16-no4/scriabine-op16-no4-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/scriabine-op16-no4.mid"
+  },
+  {
+    "titulo": "scriabine-op16-no5",
+    "compositor": "Alexander Scriabin",
+    "periodo": "Romántico",
+    "filename": "scriabine-op16-no5-a4.pdf",
+    "localPath": "/partituras/scriabine-op16-no5-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScriabinA/O16/scriabine-op16-no5/scriabine-op16-no5-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/scriabine-op16-no5.mid"
+  },
+  {
+    "titulo": "prelude",
+    "compositor": "Alexander Scriabin",
+    "periodo": "Romántico",
+    "filename": "prelude-a4.pdf",
+    "localPath": "/partituras/prelude-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/ScriabinA/O59/prelude/prelude-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/prelude.mid"
+  },
+  {
+    "titulo": "Traviata_01",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_01-a4.pdf",
+    "localPath": "/partituras/Traviata_01-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_01/Traviata_01-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_01.mid"
+  },
+  {
+    "titulo": "Traviata_02",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_02-a4.pdf",
+    "localPath": "/partituras/Traviata_02-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_02/Traviata_02-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_02.mid"
+  },
+  {
+    "titulo": "Traviata_03",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_03-a4.pdf",
+    "localPath": "/partituras/Traviata_03-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_03/Traviata_03-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_03.mid"
+  },
+  {
+    "titulo": "Traviata_04",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_04-a4.pdf",
+    "localPath": "/partituras/Traviata_04-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_04/Traviata_04-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_04.mid"
+  },
+  {
+    "titulo": "Traviata_05",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_05-a4.pdf",
+    "localPath": "/partituras/Traviata_05-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_05/Traviata_05-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_05.mid"
+  },
+  {
+    "titulo": "Traviata_06",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_06-a4.pdf",
+    "localPath": "/partituras/Traviata_06-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_06/Traviata_06-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_06.mid"
+  },
+  {
+    "titulo": "Traviata_07",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_07-a4.pdf",
+    "localPath": "/partituras/Traviata_07-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_07/Traviata_07-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_07.mid"
+  },
+  {
+    "titulo": "Traviata_08",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_08-a4.pdf",
+    "localPath": "/partituras/Traviata_08-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_08/Traviata_08-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_08.mid"
+  },
+  {
+    "titulo": "Traviata_09",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_09-a4.pdf",
+    "localPath": "/partituras/Traviata_09-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_09/Traviata_09-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_09.mid"
+  },
+  {
+    "titulo": "Traviata_10",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_10-a4.pdf",
+    "localPath": "/partituras/Traviata_10-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_10/Traviata_10-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_10.mid"
+  },
+  {
+    "titulo": "Traviata_11",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_11-a4.pdf",
+    "localPath": "/partituras/Traviata_11-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_11/Traviata_11-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_11.mid"
+  },
+  {
+    "titulo": "Traviata_12",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_12-a4.pdf",
+    "localPath": "/partituras/Traviata_12-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_12/Traviata_12-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_12.mid"
+  },
+  {
+    "titulo": "Traviata_13",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_13-a4.pdf",
+    "localPath": "/partituras/Traviata_13-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_13/Traviata_13-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_13.mid"
+  },
+  {
+    "titulo": "Traviata_14",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_14-a4.pdf",
+    "localPath": "/partituras/Traviata_14-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_14/Traviata_14-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_14.mid"
+  },
+  {
+    "titulo": "Traviata_15",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_15-a4.pdf",
+    "localPath": "/partituras/Traviata_15-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_15/Traviata_15-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_15.mid"
+  },
+  {
+    "titulo": "Traviata_16",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_16-a4.pdf",
+    "localPath": "/partituras/Traviata_16-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_16/Traviata_16-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_16.mid"
+  },
+  {
+    "titulo": "Traviata_17",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_17-a4.pdf",
+    "localPath": "/partituras/Traviata_17-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_17/Traviata_17-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_17.mid"
+  },
+  {
+    "titulo": "Traviata_18",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_18-a4.pdf",
+    "localPath": "/partituras/Traviata_18-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_18/Traviata_18-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_18.mid"
+  },
+  {
+    "titulo": "Traviata_Preludio",
+    "compositor": "Giuseppe Verdi",
+    "periodo": "Romántico",
+    "filename": "Traviata_Preludio-a4.pdf",
+    "localPath": "/partituras/Traviata_Preludio-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/VerdiG/Traviata_Preludio/Traviata_Preludio-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Traviata_Preludio.mid"
+  },
+  {
+    "titulo": "actii",
+    "compositor": "Georges Bizet",
+    "periodo": "Romántico",
+    "filename": "actii-a4.pdf",
+    "localPath": "/partituras/actii-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BizetG/actii/actii-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/actii.mid"
+  },
+  {
+    "titulo": "prelude",
+    "compositor": "Georges Bizet",
+    "periodo": "Romántico",
+    "filename": "prelude-a4.pdf",
+    "localPath": "/partituras/prelude-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/BizetG/prelude/prelude-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/prelude.mid"
+  },
+  {
+    "titulo": "lalo-lesclave",
+    "compositor": "Édouard Lalo",
+    "periodo": "Romántico",
+    "filename": "lalo-lesclave-a4.pdf",
+    "localPath": "/partituras/lalo-lesclave-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/LaloE/lalo-lesclave/lalo-lesclave-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/lalo-lesclave.mid"
+  },
+  {
+    "titulo": "Ich-lade-gern-mir-Gaeste-ein",
+    "compositor": "Johann Strauss (hijo)",
+    "periodo": "Romántico",
+    "filename": "Ich-lade-gern-mir-Gaeste-ein-a4.pdf",
+    "localPath": "/partituras/Ich-lade-gern-mir-Gaeste-ein-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/StraussJJ/DieFledermaus/Ich-lade-gern-mir-Gaeste-ein/Ich-lade-gern-mir-Gaeste-ein-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Ich-lade-gern-mir-Gaeste-ein.mid"
+  },
+  {
+    "titulo": "blue_danube",
+    "compositor": "Johann Strauss (hijo)",
+    "periodo": "Romántico",
+    "filename": "blue_danube-a4.pdf",
+    "localPath": "/partituras/blue_danube-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/StraussJJ/O314/blue_danube/blue_danube-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/blue_danube.mid"
+  },
+  {
+    "titulo": "blitz",
+    "compositor": "Johann Strauss (hijo)",
+    "periodo": "Romántico",
+    "filename": "blitz-a4.pdf",
+    "localPath": "/partituras/blitz-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/StraussJJ/O324/blitz/blitz-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/blitz.mid"
+  },
+  {
     "titulo": "Celle",
     "compositor": "Erik Satie",
     "periodo": "Moderno",
@@ -4153,5 +5929,45 @@
     "source": "https://www.mutopiaproject.org/ftp/BartokB/rom_folk_dance_1_bartok/rom_folk_dance_1_bartok-a4.pdf",
     "licencia": "CC / Dominio Público (Mutopia Project)",
     "midiPath": "/midi/rom_folk_dance_1_bartok.mid"
+  },
+  {
+    "titulo": "turpin",
+    "compositor": "Tom Turpin",
+    "periodo": "Moderno",
+    "filename": "turpin-a4.pdf",
+    "localPath": "/partituras/turpin-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/TurpinT/turpin/turpin-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/turpin.mid"
+  },
+  {
+    "titulo": "turpinhar",
+    "compositor": "Tom Turpin",
+    "periodo": "Moderno",
+    "filename": "turpinhar-a4.pdf",
+    "localPath": "/partituras/turpinhar-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/TurpinT/turpinhar/turpinhar-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/turpinhar.mid"
+  },
+  {
+    "titulo": "pilm",
+    "compositor": "Alexei Stanchinsky",
+    "periodo": "Moderno",
+    "filename": "pilm-a4.pdf",
+    "localPath": "/partituras/pilm-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/StanchinskyAV/pilm/pilm-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/pilm.mid"
+  },
+  {
+    "titulo": "Gondellied",
+    "compositor": "Dora Pejačević",
+    "periodo": "Moderno",
+    "filename": "Gondellied-a4.pdf",
+    "localPath": "/partituras/Gondellied-a4.pdf",
+    "source": "https://www.mutopiaproject.org/ftp/PejacsevichD/O4/Gondellied/Gondellied-a4.pdf",
+    "licencia": "CC / Dominio Público (Mutopia Project)",
+    "midiPath": "/midi/Gondellied.mid"
   }
 ]
