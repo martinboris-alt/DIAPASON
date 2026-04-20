@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${article.title} · Diapasón`,
     description: article.description,
     keywords: article.keywords.join(", "),
+    alternates: { canonical: `https://diapason.vercel.app/blog/${slug}` },
     openGraph: { title: article.title, description: article.description, type: "article" },
   };
 }

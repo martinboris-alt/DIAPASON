@@ -51,6 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${nombre} — Partituras de Piano Gratis · Diapasón`,
     description: desc,
     keywords: `${nombre}, partituras piano, PDF gratis, ${info?.nacionalidad ?? ""}, ${info?.estilo ?? ""}`,
+    alternates: { canonical: `https://diapason.vercel.app/compositores/${slug}` },
     openGraph: {
       title: `${nombre} · Partituras de Piano`,
       description: desc,

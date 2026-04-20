@@ -30,6 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/marcas`,     lastModified: now, priority: 0.8,  changeFrequency: "monthly" },
     { url: `${BASE}/blog`,       lastModified: now, priority: 0.9,  changeFrequency: "weekly" },
     { url: `${BASE}/faq`,        lastModified: now, priority: 0.8,  changeFrequency: "monthly" },
+    { url: `${BASE}/studio`,     lastModified: now, priority: 0.85, changeFrequency: "monthly" },
   ];
 
   // Artículos del blog

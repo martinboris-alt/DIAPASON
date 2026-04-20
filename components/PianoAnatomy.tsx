@@ -2,6 +2,8 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { ANIM } from "@/lib/animation";
 
 const partes = [
   {
@@ -44,17 +46,19 @@ const partes = [
 
 export default function PianoAnatomy() {
   const [active, setActive] = useState(0);
-  const sectionRef = useRef<HTMLElement>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  // Auto-rotate parts
+  const sectionRef = useScrollReveal<HTMLElement>({
+    selector: ".anatomy-anim",
+    stagger: ANIM.ANATOMY_STAGGER,
+    threshold: 0.15,
+  });
+
   useEffect(() => {
     intervalRef.current = setInterval(() => {
       setActive((a) => (a + 1) % partes.length);
     }, 3500);
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
   }, []);
 
   const handleSelect = (i: number) => {
@@ -65,31 +69,10 @@ export default function PianoAnatomy() {
     }, 3500);
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.querySelectorAll(".anatomy-anim").forEach((el, i) => {
-              setTimeout(() => {
-                (el as HTMLElement).style.opacity = "1";
-                (el as HTMLElement).style.transform = "translateY(0)";
-              }, i * 120);
-            });
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section ref={sectionRef} className="py-20 sm:py-28 px-6 bg-piano-black-soft overflow-hidden">
       <div className="max-w-7xl mx-auto">
 
-        {/* Header */}
         <div className="text-center mb-16 anatomy-anim" style={{ opacity: 0, transform: "translateY(20px)", transition: "opacity 0.7s ease, transform 0.7s ease" }}>
           <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4 font-light">
             Conocimiento y precisión
@@ -102,14 +85,11 @@ export default function PianoAnatomy() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-          {/* Image */}
           <div
             className="anatomy-anim relative flex items-center justify-center"
             style={{ opacity: 0, transform: "translateY(20px)", transition: "opacity 0.8s ease, transform 0.8s ease" }}
           >
-            {/* Background glow */}
             <div className="absolute inset-0 bg-gradient-radial from-gold/5 via-transparent to-transparent rounded-full blur-3xl" />
-
             <div className="relative w-full max-w-lg aspect-square">
               <Image
                 src="/images/anatomia-piano.png"
@@ -121,15 +101,14 @@ export default function PianoAnatomy() {
             </div>
           </div>
 
-          {/* Parts */}
           <div className="anatomy-anim flex flex-col gap-2" style={{ opacity: 0, transform: "translateY(20px)", transition: "opacity 0.8s ease, transform 0.8s ease" }}>
 
-            {/* Part list */}
             <div className="flex flex-col gap-1 mb-8">
               {partes.map((parte, i) => (
                 <button
                   key={parte.id}
                   onClick={() => handleSelect(i)}
+                  aria-pressed={active === i}
                   className={`text-left px-4 py-3 border-l-2 transition-all duration-300 group ${
                     active === i
                       ? "border-gold bg-gold/5 text-white-warm"
@@ -140,7 +119,7 @@ export default function PianoAnatomy() {
                     <span className={`text-sm tracking-widest uppercase font-light transition-colors duration-300 ${active === i ? "text-gold" : ""}`}>
                       {parte.nombre}
                     </span>
-                    <span className={`text-gold transition-all duration-300 ${active === i ? "opacity-100" : "opacity-0"}`}>
+                    <span className={`text-gold transition-all duration-300 ${active === i ? "opacity-100" : "opacity-0"}`} aria-hidden="true">
                       →
                     </span>
                   </div>
@@ -148,13 +127,11 @@ export default function PianoAnatomy() {
               ))}
             </div>
 
-            {/* Description card */}
             <div className="relative border border-gold/20 p-6 min-h-[120px]">
               <div className="absolute top-0 left-0 w-8 h-px bg-gold" />
               <div className="absolute top-0 left-0 w-px h-8 bg-gold" />
               <div className="absolute bottom-0 right-0 w-8 h-px bg-gold" />
               <div className="absolute bottom-0 right-0 w-px h-8 bg-gold" />
-
               <p className="text-xs tracking-[0.3em] uppercase text-gold mb-3 font-light">
                 {partes[active].nombre}
               </p>
@@ -167,12 +144,14 @@ export default function PianoAnatomy() {
               </p>
             </div>
 
-            {/* Progress dots */}
-            <div className="flex gap-2 mt-4 justify-center">
-              {partes.map((_, i) => (
+            <div className="flex gap-2 mt-4 justify-center" role="tablist" aria-label="Partes del piano">
+              {partes.map((parte, i) => (
                 <button
                   key={i}
                   onClick={() => handleSelect(i)}
+                  role="tab"
+                  aria-selected={active === i}
+                  aria-label={parte.nombre}
                   className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
                     active === i ? "bg-gold w-4" : "bg-white-warm/20"
                   }`}

@@ -18,6 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${marca.nombre} · Historia y modelos de piano · Diapasón`,
     description: marca.resumen,
     keywords: `${marca.nombre}, piano ${marca.nombre}, historia ${marca.nombre}, ${marca.pais}, ${marca.ciudad}, marca de piano`,
+    alternates: { canonical: `https://diapason.vercel.app/marcas/${slug}` },
     openGraph: { title: marca.nombre, description: marca.resumen, type: "article" },
   };
 }

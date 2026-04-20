@@ -1,0 +1,6 @@
+export const ANIM = {
+  CONTACT_STAGGER: 150,
+  GALLERY_STAGGER: 100,
+  ANATOMY_STAGGER: 120,
+  AUTOFOCUS_DELAY: 50,
+} as const;

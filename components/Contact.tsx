@@ -1,6 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { ANIM } from "@/lib/animation";
 
 const services = [
   "Afinación de piano",
@@ -12,57 +15,51 @@ const services = [
 
 export default function Contact() {
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
+    name: "", email: "", phone: "", service: "", message: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
-  const sectionRef = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.querySelectorAll(".contact-anim").forEach((el, i) => {
-              setTimeout(() => {
-                (el as HTMLElement).style.opacity = "1";
-                (el as HTMLElement).style.transform = "translateY(0)";
-              }, i * 150);
-            });
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
+  const sectionRef = useScrollReveal<HTMLElement>({
+    selector: ".contact-anim",
+    stagger: ANIM.CONTACT_STAGGER,
+    threshold: 0.15,
+  });
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
-  };
+  ) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
+
+    const serviceId  = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey  = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("EmailJS: faltan variables de entorno. Ver .env.local.example");
+      setStatus("error");
+      return;
+    }
+
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (res.ok) {
-        setStatus("ok");
-        setForm({ name: "", email: "", phone: "", service: "", message: "" });
-      } else {
-        setStatus("error");
-      }
-    } catch {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: form.name,
+          from_email: form.email,
+          phone:      form.phone || "No indicado",
+          service:    form.service || "No seleccionado",
+          message:    form.message,
+        },
+        { publicKey }
+      );
+      setStatus("ok");
+      setForm({ name: "", email: "", phone: "", service: "", message: "" });
+    } catch (err) {
+      console.error("EmailJS error:", err);
       setStatus("error");
     }
   };
@@ -80,12 +77,9 @@ export default function Contact() {
               className="contact-anim"
               style={{ opacity: 0, transform: "translateY(30px)", transition: "opacity 0.7s ease, transform 0.7s ease" }}
             >
-              <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4 font-light">
-                Hablemos
-              </p>
+              <p className="text-xs tracking-[0.4em] uppercase text-gold mb-4 font-light">Hablemos</p>
               <h2 className="font-display text-4xl md:text-5xl font-semibold text-white-warm leading-tight mb-6">
-                Solicita tu
-                <br />
+                Solicita tu<br />
                 <em className="italic text-gold">servicio hoy</em>
               </h2>
               <div className="w-12 h-px bg-gold/60 mb-8" />
@@ -101,32 +95,12 @@ export default function Contact() {
               </p>
 
               <div className="flex flex-col gap-5 mt-4">
-                <ContactInfo
-                  icon={<PhoneIcon />}
-                  label="Teléfono / WhatsApp"
-                  value="+56 9 8670 2647"
-                  href="https://wa.me/56986702647"
-                />
-                <ContactInfo
-                  icon={<MailIcon />}
-                  label="Correo electrónico"
-                  value="diego@ejemplo.com"
-                  href="mailto:diego@ejemplo.com"
-                />
-                <ContactInfo
-                  icon={<InstagramIcon />}
-                  label="Instagram"
-                  value="@diegojuica"
-                  href="https://www.instagram.com/diegojuica/"
-                />
-                <ContactInfo
-                  icon={<MapIcon />}
-                  label="Área de servicio"
-                  value="Chile"
-                />
+                <ContactInfo icon={<PhoneIcon />} label="Teléfono / WhatsApp" value="+56 9 8670 2647" href="https://wa.me/56986702647" />
+                <ContactInfo icon={<MailIcon />} label="Correo electrónico" value="diego@ejemplo.com" href="mailto:diego@ejemplo.com" />
+                <ContactInfo icon={<InstagramIcon />} label="Instagram" value="@diegojuica" href="https://www.instagram.com/diegojuica/" />
+                <ContactInfo icon={<MapIcon />} label="Área de servicio" value="Chile" />
               </div>
 
-              {/* WhatsApp CTA */}
               <a
                 href="https://wa.me/56986702647?text=Hola%20Diego%2C%20me%20interesa%20un%20servicio%20de%20afinaci%C3%B3n."
                 target="_blank"
@@ -159,26 +133,29 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-8" noValidate>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div>
-                    <label className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
+                    <label htmlFor="contact-name" className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
                       Nombre *
                     </label>
                     <input
+                      id="contact-name"
                       name="name"
                       required
                       value={form.name}
                       onChange={handleChange}
                       placeholder="Tu nombre"
                       className={inputClass}
+                      aria-required="true"
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
+                    <label htmlFor="contact-email" className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
                       Correo *
                     </label>
                     <input
+                      id="contact-email"
                       name="email"
                       type="email"
                       required
@@ -186,16 +163,18 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="tu@email.com"
                       className={inputClass}
+                      aria-required="true"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   <div>
-                    <label className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
+                    <label htmlFor="contact-phone" className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
                       Teléfono
                     </label>
                     <input
+                      id="contact-phone"
                       name="phone"
                       type="tel"
                       value={form.phone}
@@ -205,10 +184,11 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
+                    <label htmlFor="contact-service" className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
                       Servicio
                     </label>
                     <select
+                      id="contact-service"
                       name="service"
                       value={form.service}
                       onChange={handleChange}
@@ -228,10 +208,11 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
+                  <label htmlFor="contact-message" className="text-[10px] tracking-widest uppercase text-white-warm/50 block mb-2">
                     Mensaje *
                   </label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     required
                     rows={4}
@@ -239,12 +220,13 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Cuéntame sobre tu piano y qué necesitas..."
                     className={`${inputClass} resize-none`}
+                    aria-required="true"
                   />
                 </div>
 
                 {status === "error" && (
-                  <p className="text-red-500/80 text-xs tracking-wide">
-                    Hubo un error. Por favor intenta de nuevo o escríbeme por WhatsApp.
+                  <p role="alert" className="text-red-500/80 text-xs tracking-wide">
+                    Hubo un error al enviar. Por favor intenta de nuevo o escríbeme por WhatsApp.
                   </p>
                 )}
 
@@ -265,10 +247,7 @@ export default function Contact() {
 }
 
 function ContactInfo({
-  icon,
-  label,
-  value,
-  href,
+  icon, label, value, href,
 }: {
   icon: React.ReactNode;
   label: string;
@@ -285,11 +264,7 @@ function ContactInfo({
     </div>
   );
   if (href)
-    return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className="block">
-        {content}
-      </a>
-    );
+    return <a href={href} target="_blank" rel="noopener noreferrer" className="block">{content}</a>;
   return content;
 }
 
@@ -322,9 +297,9 @@ function MapIcon() {
 function InstagramIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" className="w-5 h-5">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
     </svg>
   );
 }

@@ -74,7 +74,15 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full bg-piano-black text-white-warm antialiased" suppressHydrationWarning>
-        <ThemeProvider>{children}</ThemeProvider>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-gold focus:text-piano-black focus:text-sm focus:tracking-widest focus:uppercase focus:font-medium"
+        >
+          Saltar al contenido principal
+        </a>
+        <ThemeProvider>
+          <div id="main-content">{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   );
